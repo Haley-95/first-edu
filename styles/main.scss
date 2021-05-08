@@ -1,4 +1,6 @@
+@import './constants/colors';
 @import './base/fonts';
+@import './constants/typography';
 @import './base/nomalize';
 @import './base/reset';
 
@@ -12,5 +14,5 @@
   position: absolute;
   margin: 30px;
   font-size: 30px;
-  color: #4e73df;
+  color: $blue;
 }
