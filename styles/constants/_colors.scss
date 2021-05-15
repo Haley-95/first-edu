@@ -1,16 +1,19 @@
 $white: #fff;
-$category-icon: rgba(255, 255, 255, 0.8);
-$category-name: rgba(255, 255, 255, 0.6);
-$background: #e9ebef;
-$input: #f7f7f7;
-$border: #d1d3e2;
-$dark: #858796;
-$primary: #3a3b45;
+$gray-100: #f6f9fc;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #8898aa;
+$gray-700: #525f7f;
+$gray-800: #32325d;
+$gray-900: #212529;
 $black: #000;
-$blue: #4e73df;
-$blue-gradient: linear-gradient(
-  360deg,
-  rgba(0, 48, 189, 0.68) -9.95%,
-  #5373db 59.51%,
-  rgba(0, 48, 189, 0.45) 120.3%
-);
+$default: #172b4d;
+$primary: #5e72e4;
+$secondary: #f4f5f7;
+$blue: #11cdef;
+$green: #2dce89;
+$red: #f5365c;
+$orange: #fb6340;
+$gradient-primary: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
