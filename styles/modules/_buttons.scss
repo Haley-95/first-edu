@@ -1,0 +1,129 @@
+%btn-base {
+  padding: 0 20px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 100ms ease-in-out;
+
+  &:hover {
+    @include inline-flexbox;
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px $box-shadow-1, 0 3px 6px $box-shadow-2;
+  }
+}
+
+// Note: Buttons Styles
+.btn-fill-primary {
+  @extend %btn-base;
+  color: $white;
+  background-color: $primary;
+
+  &:active {
+    background-color: $p-hover;
+  }
+}
+
+.btn-fill-select {
+  @extend %btn-base;
+  color: $dark;
+  background-color: $select;
+
+  &:active {
+    background-color: $border;
+  }
+}
+
+.btn-fill-red {
+  @extend %btn-base;
+  color: $white;
+  background-color: $red;
+}
+
+.btn-fill-orange {
+  @extend %btn-base;
+  color: $white;
+  background-color: $orange;
+}
+
+.btn-fill-violet {
+  @extend %btn-base;
+  color: $white;
+  background-color: $violet;
+}
+
+.btn-fill-green {
+  @extend %btn-base;
+  color: $white;
+  background-color: $green;
+}
+
+.btn-fill-blue {
+  @extend %btn-base;
+  color: $white;
+  background-color: $blue;
+}
+
+.btn-outlined-gray {
+  @extend %btn-base;
+  color: $title;
+  background-color: transparent;
+  border: 1px solid $title;
+}
+
+.btn-outlined-primary {
+  @extend %btn-base;
+  color: $primary;
+  background-color: $white;
+  border: 1px solid $primary;
+}
+
+.btn-outlined-blue {
+  @extend %btn-base;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+}
+
+.btn-outlined-green {
+  @extend %btn-base;
+  color: $green;
+  background-color: $white;
+  border: 1px solid $green;
+}
+
+.btn-outlined-red {
+  @extend %btn-base;
+  color: $red;
+  background-color: $white;
+  border: 1px solid $red;
+}
+
+.btn-outlined-orange {
+  @extend %btn-base;
+  color: $orange;
+  background-color: $white;
+  border: 1px solid $orange;
+}
+
+.btn-outlined-violet {
+  @extend %btn-base;
+  color: $violet;
+  background-color: $white;
+  border: 1px solid $violet;
+}
+
+// Note: Buttons Sizes
+.btn-43 {
+  @include text-style(14);
+  height: 43px;
+}
+
+.btn-51 {
+  @include text-style(14);
+  height: 51px;
+}
+
+.btn-28 {
+  @include text-style(12);
+  height: 28px;
+}
