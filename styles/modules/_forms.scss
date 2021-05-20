@@ -1,0 +1,79 @@
+%form-base {
+  @include text-style(13, $text);
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  appearance: none;
+
+  &::placeholder {
+    color: $title;
+  }
+
+  &:not(:disabled):hover {
+    background-color: $active;
+  }
+
+  &:not(:disabled):focus {
+    border-color: $primary;
+    box-shadow: 0 7px 14px $box-shadow-1, 0 3px 6px $box-shadow-2;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
+.form-select,
+.form-input {
+  @extend %form-base;
+}
+
+// Note: Select
+.select-group {
+  position: relative;
+
+  &.is-active {
+    .form-select {
+      border-color: $primary;
+    }
+
+    .fa-caret-down {
+      color: $primary;
+    }
+  }
+
+  .form-select {
+    padding-right: 40px;
+    text-overflow: ellipsis;
+  }
+
+  .fa-caret-down {
+    @include pos-center-y;
+    right: 14px;
+    color: $border;
+    pointer-events: none;
+  }
+}
+
+// Note: Input
+.input-group {
+  position: relative;
+
+  .form-input {
+    padding-left: 40px;
+  }
+
+  .material-icons {
+    @include pos-center-y;
+    left: 10px;
+    font-size: 20px;
+    color: $title;
+    pointer-events: none;
+  }
+}

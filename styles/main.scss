@@ -11,4 +11,9 @@
 @import './mixins/position';
 @import './mixins/flexbox';
 
+@import './modules/tags';
+@import './modules/avatars';
+@import './modules/buttons';
+@import './modules/forms';
+
 @import './layouts/grids';
