@@ -1,0 +1,51 @@
+%page-item-base {
+  @include inline-flexbox;
+  @include text-style(14, $title);
+  height: 36px;
+  background-color: $white;
+  border: 1px solid $border;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $border;
+  }
+}
+
+.pagenation {
+  @include flexbox;
+
+  .page-control {
+    @extend %page-item-base;
+    width: 36px;
+    margin: 0 3px;
+
+    .material-icons {
+      font-size: 20px;
+    }
+  }
+
+  .page-list {
+    @include flexbox;
+  }
+
+  .page-item {
+    margin: 0 3px;
+
+    &.is-active {
+      a,
+      button {
+        color: $white;
+        background-color: $primary;
+        border: 1px solid $primary;
+        box-shadow: 0 7px 14px $box-shadow-1, 0 3px 6px $box-shadow-2;
+      }
+    }
+
+    a,
+    button {
+      @extend %page-item-base;
+      min-width: 36px;
+      padding: 0 4px;
+    }
+  }
+}
