@@ -4,8 +4,14 @@
   @include text-style(12);
   height: 20px;
   padding: 0 6px;
-  font-weight: 700;
+  font-weight: 500;
   border-radius: 4px;
+}
+
+.tag-default {
+  @extend %tag-base;
+  color: $white;
+  background-color: $default;
 }
 
 .tag-red {
@@ -30,6 +36,12 @@
   @extend %tag-base;
   color: $white;
   background-color: $orange;
+}
+
+.tag-violet {
+  @extend %tag-base;
+  color: $white;
+  background-color: $violet;
 }
 
 .tag-gray {

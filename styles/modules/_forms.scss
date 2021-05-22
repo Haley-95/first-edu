@@ -6,7 +6,6 @@
   padding: 0 12px;
   background-color: $white;
   border: 1px solid $border;
-  border-radius: 4px;
   transition: all 200ms ease-in-out;
   appearance: none;
 
@@ -51,11 +50,13 @@
   .form-select {
     padding-right: 40px;
     text-overflow: ellipsis;
+    border-radius: 4px;
   }
 
   .fa-caret-down {
     @include pos-center-y;
     right: 14px;
+    font-size: 18px;
     color: $border;
     pointer-events: none;
   }
@@ -67,6 +68,7 @@
 
   .form-input {
     padding-left: 40px;
+    border-radius: 100px;
   }
 
   .material-icons {
