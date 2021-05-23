@@ -114,25 +114,85 @@
       </div>
     </header>
 
-    <nav class="gnb-side-nav lg-only">
-        <div class="side-nav-header">
+    <aside class="sidebar lg-only">
+      <header class="sidebar-header">
           <h1 class="logo">
             <a href="/">
               <img src="./assets/png/Basic Logo.png" alt="FIRST EDU" />
             </a>
           </h1>
+      </header>
+
+      <nav class="sidebar-nav">
+        <h2 class="visually-hidden">메뉴</h2>
+
+        <div class="drawer-menu">
+          <button class="drawer-menu-button" type="button">
+          <i class="fas fa-user-friends" aria-hidden="true"></i>
+          원생 관리
+          <span class="material-icons" aria-hidden="true">chevron_right</span>
+        </button>
         </div>
-        <div class="side-nav-content">
-          <ul class="gnb-nav-list">
-            <li class="gnb-nav-item">
-              <a class="menu-category" href="/">
+
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <a href="/">
+                  <span class="category-name">원생 목록</span>
+                </a>
+              </li>
+              <li class="drawer-menu-item">
+                <a href="/">
+                  <span class="category-name">원생 통계</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        <!-- Note: Login boss  -->
+        <div class="boss-drawer-menu">
+          <button class="boss-drawer-menu-button" type="button">
+          <i class="fas fa-sitemap"></i>
+          조직 관리
+          <span class="material-icons" aria-hidden="true">chevron_right</span>
+        </button>
+        </div>
+
+          <div class="boss-drawer-menu-content">
+            <ul class="boss-drawer-menu-list">
+              <li class="boss-drawer-menu-item">
+                <a href="/">
+                  <span class="category-name">학원 정보 등록</span>
+                </a>
+              </li>
+              <li class="boss-drawer-menu-item">
+                <a href="/">
+                  <span class="category-name">레벨 관리</span>
+                </a>
+              </li>
+              <li class="boss-drawer-menu-item">
+                <a href="/">
+                  <span class="category-name">직원 목록</span>
+                </a>
+              </li>
+              <li class="boss-drawer-menu-item">
+                <a href="/">
+                  <span class="category-name">직원 등록</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <ul class="drawer-menu-list">
+            <li class="drawer-menu-item">
+              <a href="/">
                 <i class="fas fa-chart-line menu-icon"></i>
                 <span class="menu-name">대시보드</span>
               </a>
             </li>
-          </ul>
-        </div>
+          </ul> -->
+        </nav>
       </div>
-    </nav>
+    </aside>
   </body>
 </html>
