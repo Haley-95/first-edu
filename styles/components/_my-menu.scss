@@ -1,11 +1,47 @@
 .my-menu {
   position: relative;
 
+  &-button {
+    &:hover {
+      img,
+      .user-name {
+        color: $border;
+        border-color: $border;
+      }
+    }
+
+    &:active,
+    &.is-active {
+      img,
+      .user-name {
+        color: $default;
+        border-color: $default;
+      }
+    }
+
+    img {
+      display: block;
+      width: 36px;
+      height: 36px;
+      border: 3px solid $white;
+      border-radius: 50%;
+      transition: all 200ms ease-in-out;
+      object-fit: cover;
+    }
+
+    .user-name {
+      display: block;
+      margin-left: 10px;
+      font-weight: 500;
+      color: $white;
+      transition: all 200ms ease-in-out;
+    }
+  }
+
   &-content {
     position: absolute;
     top: 55px;
     right: 5px;
-    box-shadow: $dropdown-shadow;
   }
 
   &-list {
@@ -13,6 +49,7 @@
     padding: 8px 0;
     background-color: $white;
     border-radius: 4px;
+    box-shadow: $dropdown-shadow;
   }
 
   &-item {
@@ -44,7 +81,7 @@
 
   @include responsive(D) {
     &-content {
-      left: -9px;
+      left: -10px;
     }
   }
 }
