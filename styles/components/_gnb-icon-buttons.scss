@@ -12,7 +12,8 @@
     color: $border;
   }
 
-  &:active {
+  &:active,
+  &.is-active {
     color: $s-dark;
   }
 

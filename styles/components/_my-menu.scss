@@ -53,10 +53,9 @@
   }
 
   &-item {
-    color: $bold;
-
     a {
       @include flexbox(start);
+      @include text-style(14, $bold);
       height: 40px;
       padding: 8px 16px;
 
