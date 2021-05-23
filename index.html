@@ -28,14 +28,15 @@
     ></script>
   </head>
   <body>
+    <!-- Note: After Login -->
     <header class="gnb">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
-            <!-- <h1 class="logo">
-              <img src="./assets/png/White Logo.png" alt="FIRST EDU" />
-            </h1> -->
             <div class="gnb-wrapper">
+              <!-- <h1 class="logo">
+                <img src="./assets/png/White Logo.png" alt="FIRST EDU" />
+              </h1> -->
               <div class="gnb-left">
                 <button
                   class="gnb-icon-button is-menu"
@@ -82,8 +83,9 @@
                     <i class="fas fa-user-clock"></i>
                   </button>
 
-                  <button
-                    class="gnb-avatar-button"
+                  <div class="my-menu">
+                    <button
+                    class="my-menu-button"
                     type="button"
                     aria-label="open myMenu button"
                   >
@@ -95,6 +97,24 @@
                     </div>
                     <strong class="user-name lg-only">강용승 선생님</strong>
                   </button>
+
+                    <div class="my-menu-content">
+                      <ul class="my-menu-list">
+                        <li class="my-menu-item">
+                          <a href="/" aria-label="myhome">
+                            <i class="fas fa-house-user"></i>
+                            <span>마이홈</span>
+                          </a>
+                        </li>
+                        <li class="my-menu-item">
+                          <a href="/" aria-label="logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>로그아웃</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -102,16 +122,6 @@
         </div>
       </div>
     </header>
-
-    <!-- <div>
-  <button type="button" aria-label="attendance">
-    <i class="fas fa-house-user"></i>
-  </button>
-
-  <button type="button" aria-label="attendance">
-    <i class="fas fa-sign-out-alt"></i>
-  </button>
-</div> -->
 
     <nav class="gnb-side-nav lg-only">
         <div class="side-nav-header">
