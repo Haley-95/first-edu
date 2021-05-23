@@ -4,23 +4,27 @@
   display: block;
   width: 250px;
   height: 100%;
+  padding: 20px;
   background-color: $white;
   box-shadow: 0 0 1rem 0 rgba($title, 0.15);
 
-  .sidebar-header {
-    height: 80px;
-
+  &-header {
     .logo {
       @include flexbox;
+      margin-bottom: 24px;
 
       a {
-        padding: 20px;
+        display: block;
       }
 
       img {
+        display: block;
         width: auto;
         height: 35px;
       }
     }
+  }
+
+  &-nav {
   }
 }
