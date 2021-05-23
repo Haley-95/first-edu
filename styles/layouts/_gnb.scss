@@ -1,6 +1,7 @@
 .gnb {
   background-color: $primary;
   border-bottom: 1px solid $select;
+  transition: all 150ms ease-in-out;
 
   &-wrapper {
     @include flexbox(between);
@@ -33,20 +34,24 @@
       }
     }
   }
+}
+@include responsive(D) {
+  .gnb {
+    margin-left: 250px;
+  }
 
-  @include responsive(D) {
-    .user-name {
-      @include text-style(14, $white);
-      margin-left: 8px;
-      transition: all 200ms ease;
+  .user-name {
+    margin-left: 10px;
+    font-weight: 500;
+    color: $white;
+    transition: all 200ms ease;
 
-      &:hover {
-        color: $border;
-      }
+    &:hover {
+      color: $border;
+    }
 
-      &:active {
-        color: $s-dark;
-      }
+    &:active {
+      color: $s-dark;
     }
   }
 }

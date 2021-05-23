@@ -13,4 +13,12 @@
   &:active {
     color: $s-dark;
   }
+
+  &.start-work {
+    color: $green;
+
+    &:active {
+      color: $g-dark;
+    }
+  }
 }
