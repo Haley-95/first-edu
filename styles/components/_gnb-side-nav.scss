@@ -1,7 +1,6 @@
 .gnb-side-nav {
   position: fixed;
   top: 0;
-  z-index: 1;
   display: block;
   width: 250px;
   height: 100%;
@@ -26,19 +25,22 @@
   }
 
   .side-nav-content {
-    @include flexbox;
+    padding: 0 24px;
 
     .gnb-nav-list {
       @include flexbox;
 
       .gnb-nav-item {
         @include flexbox;
+        padding: 10px 16px;
 
         .menu-category {
+          @include flexbox;
           width: 200px;
           height: 24px;
 
           .menu-icon {
+            @include flexbox;
             width: 32px;
             height: 24px;
             font-size: 15px;
