@@ -19,7 +19,7 @@
 * # of columns           12
 * gutter                 20px
 * unit                   75px
-* margin                 auto
+* margin                 30px
 * container-size         1140px
 * max-container-size     1140px
 */
@@ -31,11 +31,12 @@ $sm-margin: 5px;
 
 $md-columns: 12;
 $md-margin: 30px;
-$md-max-container: 960px + $md-margin * 2;
+// $md-max-container: 960px + $md-margin * 2;
 
 $lg-columns: 12;
 $lg-unit: 75px;
-$lg-max-container: ($lg-unit + $gutter) * $lg-columns;
+$lg-margin: 30px;
+// $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
 
 .container {
   width: 100%;
@@ -59,7 +60,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
   }
 
   @include responsive(T) {
-    max-width: $md-max-container;
+    // max-width: $md-max-container;
     padding: 0 $md-margin;
 
     @for $i from 1 through $md-columns {
@@ -70,8 +71,8 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
   }
 
   @include responsive(D) {
-    max-width: $lg-max-container;
-    padding: 0;
+    // max-width: $lg-max-container;
+    padding: 0 $lg-margin;
 
     @for $i from 1 through $lg-columns {
       .col-lg-#{$i} {
