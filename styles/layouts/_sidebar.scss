@@ -4,17 +4,17 @@
   display: block;
   width: 250px;
   height: 100%;
-  padding: 20px;
+  padding: 0 10px;
   background-color: $white;
   box-shadow: 0 0 1rem 0 rgba($title, 0.15);
 
   &-header {
     .logo {
       @include flexbox;
-      margin-bottom: 24px;
 
       a {
         display: block;
+        padding: 20px;
       }
 
       img {
@@ -23,8 +23,5 @@
         height: 35px;
       }
     }
-  }
-
-  &-nav {
   }
 }
