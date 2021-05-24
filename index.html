@@ -125,72 +125,176 @@
 
       <nav class="sidebar-nav">
         <h2 class="visually-hidden">메뉴</h2>
-
+        
+        <strong class="drawer-menu-category">학생</strong>
+        <div class="drawer-menu">
+          <a class="drawer-menu-link" href="/">
+            <i class="fas fa-user-friends" aria-hidden="true"></i>
+            원생 관리
+          </a>
+        </div>
+        
+        <div class="drawer-menu">
+          <a class="drawer-menu-link" href="/">
+            <i class="fas fa-stopwatch" aria-hidden="true"></i>
+            출결 관리
+          </a>
+        </div>
+        
         <div class="drawer-menu">
           <button class="drawer-menu-button" type="button">
-          <i class="fas fa-user-friends" aria-hidden="true"></i>
-          원생 관리
-          <span class="material-icons" aria-hidden="true">chevron_right</span>
-        </button>
+            <i class="fas fa-edit" aria-hidden="true"></i>
+            성적 관리
+            <span class="material-icons" aria-hidden="true">chevron_right</span>
+          </button>
+          
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item is-active">
+                <a href="/">
+                  시험 일정
+                </a>
+              </li>
+              <li class="drawer-menu-item">
+                <a href="/">
+                  시험 점수
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-
+        
+        <div class="drawer-menu">
+          <a class="drawer-menu-link" href="/">
+            <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+            수납 관리
+          </a>
+        </div>
+        
+        <div class="drawer-menu">
+          <a class="drawer-menu-link" href="/">
+            <i class="fas fa-comment-dots" aria-hidden="true"></i>
+            상담 관리
+          </a>
+        
+        <strong class="drawer-menu-category">선생님</strong>
+        <div class="drawer-menu">
+          <a class="drawer-menu-link" href="/">
+            <i class="fas fa-file-alt" aria-hidden="true"></i>
+            업무 관리
+          </a>
+        </div>
+        
+        <div class="drawer-menu">
+          <a class="drawer-menu-link" href="/">
+            <i class="fas fa-business-time" aria-hidden="true"></i>
+            근태 관리
+          </a>
+        </div>
+        
+        <div class="drawer-menu">
+          <button class="drawer-menu-button" type="button">
+            <i class="fas fa-chalkboard" aria-hidden="true"></i>
+            수업 관리
+            <span class="material-icons" aria-hidden="true">chevron_right</span>
+          </button>
+          
           <div class="drawer-menu-content">
             <ul class="drawer-menu-list">
               <li class="drawer-menu-item">
                 <a href="/">
-                  <span class="category-name">원생 목록</span>
+                  시간표 관리
                 </a>
               </li>
               <li class="drawer-menu-item">
                 <a href="/">
-                  <span class="category-name">원생 통계</span>
+                  과목 관리
                 </a>
               </li>
             </ul>
           </div>
-
-        <!-- Note: Login boss  -->
-        <div class="boss-drawer-menu">
-          <button class="boss-drawer-menu-button" type="button">
-          <i class="fas fa-sitemap"></i>
-          조직 관리
-          <span class="material-icons" aria-hidden="true">chevron_right</span>
-        </button>
+        </div>
+        
+        <div class="drawer-menu">
+          <button class="drawer-menu-button" type="button">
+            <i class="fas fa-sms" aria-hidden="true"></i>
+            문자 관리
+            <span class="material-icons" aria-hidden="true">chevron_right</span>
+          </button>
+          
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <a href="/">
+                  문자 목록
+                </a>
+              </li>
+              <li class="drawer-menu-item">
+                <a href="/">
+                  문자 전송
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="drawer-menu">
+          <button class="drawer-menu-button" type="button">
+            <i class="fas fa-clipboard" aria-hidden="true"></i>
+            게시판
+            <span class="material-icons" aria-hidden="true">chevron_right</span>
+          </button>
+          
+          <div class="drawer-menu-content">
+            <ul class="drawer-menu-list">
+              <li class="drawer-menu-item">
+                <a href="/">
+                  공지사항
+                </a>
+              </li>
+              <li class="drawer-menu-item">
+                <a href="/">
+                  자료실
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
-          <div class="boss-drawer-menu-content">
-            <ul class="boss-drawer-menu-list">
-              <li class="boss-drawer-menu-item">
-                <a href="/">
-                  <span class="category-name">학원 정보 등록</span>
-                </a>
-              </li>
-              <li class="boss-drawer-menu-item">
-                <a href="/">
-                  <span class="category-name">레벨 관리</span>
-                </a>
-              </li>
-              <li class="boss-drawer-menu-item">
-                <a href="/">
-                  <span class="category-name">직원 목록</span>
-                </a>
-              </li>
-              <li class="boss-drawer-menu-item">
-                <a href="/">
-                  <span class="category-name">직원 등록</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- <ul class="drawer-menu-list">
-            <li class="drawer-menu-item">
+        
+        <!-- Note: Login boss  -->
+        <div class="drawer-menu boss is-active is-open is-boss">
+          <button class="drawer-menu-button" type="button">
+            <i class="fas fa-sitemap"></i>
+            조직 관리
+            <span class="material-icons" aria-hidden="true">chevron_right</span>
+          </button>
+          
+        <div class="drawer-menu-content">
+          <ul class="drawer-menu-list">
+            <li class="drawer-menu-item is-active">
               <a href="/">
-                <i class="fas fa-chart-line menu-icon"></i>
-                <span class="menu-name">대시보드</span>
+                학원 정보 등록
               </a>
             </li>
-          </ul> -->
+            <li class="drawer-menu-item">
+              <a href="/">
+                레벨 관리
+              </a>
+            </li>
+            <li class="drawer-menu-item">
+              <a href="/">
+                직원 목록
+              </a>
+            </li>
+            <li class="drawer-menu-item">
+              <a href="/">
+                직원 등록
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
         </nav>
       </div>
     </aside>
