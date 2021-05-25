@@ -1,9 +1,10 @@
 .search-history {
   $delete-button-size: 32px;
-  position: absolute;
+  position: fixed;
   top: 72px;
+  padding: 8px;
   background-color: $white;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: $dropdown-shadow;
 
   &-header {
@@ -14,6 +15,12 @@
       @include text-style(13, $text);
       padding: 10px;
       font-weight: 400;
+    }
+
+    button {
+      &:hover {
+        color: $black;
+      }
     }
   }
 
@@ -28,13 +35,20 @@
   }
 
   &-item {
+    @include flexbox;
     position: relative;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $active;
+    }
 
     .word-button {
       @include text-style(16, $bold);
       width: 100%;
       padding: 10px $delete-button-size 8px 10px;
       text-align: left;
+      transition: all 200ms ease-in-out;
     }
 
     .delete-button {
@@ -47,6 +61,11 @@
         height: $delete-button-size;
         font-size: 16px;
         color: $title;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          color: $black;
+        }
       }
     }
   }
