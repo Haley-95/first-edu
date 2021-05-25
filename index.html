@@ -36,11 +36,19 @@
             <div class="gnb-wrapper">
               <div class="gnb-left">
                 <button 
-                  class="gnb-icon-button is-menu"
+                  class="gnb-icon-button is-menu lg-hidden"
                   type="button" 
                   aria-label="사이드바 열기 버튼"
                 >
                   <span class="material-icons"> menu </span>
+                </button>
+
+                <button 
+                  class="gnb-icon-button is-menu lg-only"
+                  type="button" 
+                  aria-label="사이드바 닫기 버튼"
+                >
+                  <span class="material-icons">menu_open</span>
                 </button>
 
                 <div class="input-group sm-hidden">
@@ -275,12 +283,12 @@
             <ul class="drawer-menu-list">
               <li class="drawer-menu-item is-active">
                 <a href="/">
-                  학원 정보 등록
+                  회사 정보
                 </a>
               </li>
               <li class="drawer-menu-item">
                 <a href="/">
-                  레벨 관리
+                  운영 권한 관리
                 </a>
               </li>
               <li class="drawer-menu-item">
@@ -315,8 +323,8 @@
                   placeholder="학생명을 입력하세요."
                 />
               </div>
-              <button type="button">
-                <span class="material-icons">highlight_off</span>
+              <button type="button" aria-label="검색창 닫기">
+                <span class="material-icons">search_off</span>
               </button>
               </div>
             </header>
@@ -328,7 +336,7 @@
               </header>
 
               <!-- Note: Exists Recent Search Term -->
-              <div class="search-history-content">
+              <div class="search-history-content"> 
                 <ol class="search-history-list">
                   <li class="search-history-item">
                     <button class="word-button" type="button">김고딩</button>
@@ -363,13 +371,13 @@
                 </ol>
               </div>
 
-              <!-- Note: No Exists Recent Search Term -->
-              <div class="search-history-content">
+              <!-- Note: Doesn;t Exists Recent Search Term -->
+              <!-- <div class="search-history-content">
                 <p class="placeholder">최근 검색한 내역이 없습니다.</p>
               </div>
             </section>
                 </div>
-              </div>
+              </div> -->
             </div>
     </aside>
 
