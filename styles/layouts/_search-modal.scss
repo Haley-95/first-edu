@@ -1,0 +1,48 @@
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  background-color: $primary;
+
+  &-header {
+    @include flexbox;
+  }
+
+  &-form {
+    @include flexbox(between);
+    width: 100%;
+
+    button {
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-left: 10px;
+      color: $white;
+
+      span {
+        font-size: 22px;
+      }
+    }
+
+    .input-group {
+      flex-grow: 1;
+    }
+
+    .form-input-search {
+      width: 100%;
+
+      &:not(:disabled):focus {
+        width: 100%;
+      }
+    }
+  }
+
+  .search-history {
+    position: absolute;
+    top: 72px;
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: $dropdown-shadow;
+  }
+}
