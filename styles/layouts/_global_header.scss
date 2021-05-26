@@ -1,4 +1,4 @@
-.gnb {
+.global-header {
   background-color: $primary;
   border-bottom: 1px solid $select;
   transition: all 150ms ease-in-out;
@@ -27,7 +27,7 @@
 }
 
 @include responsive(T) {
-  .gnb {
+  .global-header {
     margin-left: 0;
 
     &.is-active {
@@ -35,7 +35,7 @@
     }
   }
 
-  .gnb-left {
+  .global-header-left {
     @include flexbox;
 
     .input-group {
@@ -43,7 +43,7 @@
     }
   }
 
-  .gnb-search {
+  .global-header-search {
     .search-history {
       width: 260px;
       margin-left: 23px;
@@ -52,14 +52,14 @@
 }
 
 @include responsive(D) {
-  .gnb {
+  .global-header {
     margin-left: 0;
 
     &.is-active {
       margin-left: 250px;
     }
 
-    .gnb-search {
+    .global-header-search {
       .search-history {
         width: 260px;
       }

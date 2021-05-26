@@ -1,5 +1,7 @@
 const search = document.querySelector('.form-input-search')
-const searchHistory = document.querySelector('.gnb-search .search-history')
+const searchHistory = document.querySelector(
+  '.global-header-search .search-history'
+)
 
 search.addEventListener('focus', () => {
   searchHistory.classList.add('is-active')
