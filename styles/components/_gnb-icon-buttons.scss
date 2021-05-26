@@ -12,9 +12,28 @@
     color: $border;
   }
 
-  &:active,
-  &.is-active {
+  &:active {
     color: $s-dark;
+  }
+
+  &.is-active {
+    .fa-bell {
+      color: $yellow;
+      transition: all 200ms ease;
+
+      &:active {
+        color: $y-dark;
+      }
+    }
+
+    .fa-user-clock {
+      color: $green;
+      transition: all 200ms ease;
+
+      &:active {
+        color: $g-dark;
+      }
+    }
   }
 
   .badge {
@@ -28,16 +47,9 @@
     font-size: 10px;
     line-height: 16px;
     letter-spacing: -0.01em;
+    color: $white;
     text-align: center;
     background-color: $red;
     border-radius: $badge-size / 2;
-  }
-
-  &.start-work {
-    color: $green;
-
-    &:active {
-      color: $g-dark;
-    }
   }
 }
