@@ -8,12 +8,6 @@
     padding: 16px 0;
   }
 
-  &-left {
-    .gnb-icon-button.is-menu {
-      width: 24px;
-    }
-  }
-
   &-right {
     @include flexbox;
 
@@ -27,18 +21,48 @@
     }
   }
 
-  @include responsive(T) {
-    &-left {
-      @include flexbox;
+  &-search {
+    @include flexbox;
+  }
+}
 
-      .input-group {
-        margin-left: 24px;
-      }
+@include responsive(T) {
+  .gnb {
+    margin-left: 0;
+
+    &.is-active {
+      margin-left: 250px;
+    }
+  }
+
+  .gnb-left {
+    @include flexbox;
+
+    .input-group {
+      margin-left: 24px;
+    }
+  }
+
+  .gnb-search {
+    .search-history {
+      width: 260px;
+      margin-left: 23px;
     }
   }
 }
+
 @include responsive(D) {
   .gnb {
-    margin-left: 250px;
+    margin-left: 0;
+
+    &.is-active {
+      margin-left: 250px;
+    }
+
+    .gnb-search {
+      .search-history {
+        width: 260px;
+      }
+    }
   }
 }

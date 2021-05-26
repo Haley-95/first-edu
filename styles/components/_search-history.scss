@@ -1,11 +1,18 @@
 .search-history {
   $delete-button-size: 32px;
   position: fixed;
-  top: 72px;
+  top: 60px;
+  display: none;
+  width: 91%;
   padding: 8px;
   background-color: $white;
   border-radius: 10px;
   box-shadow: $dropdown-shadow;
+  transition: all 150ms ease-in-out;
+
+  &.is-active {
+    display: block;
+  }
 
   &-header {
     @include flexbox(between);
