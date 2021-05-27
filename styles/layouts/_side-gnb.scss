@@ -4,11 +4,12 @@ $side-gnb-width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $side-gnb-level;
+  z-index: $side-gnb-header-level;
   width: $side-gnb-width;
   height: 100vh;
   padding: 0 10px;
-  overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: $white;
   transform: translate3d(-#{$side-gnb-width}, 0, 0);
   box-shadow: 0 0 1rem 0 rgba($title, 0.15);
@@ -21,12 +22,20 @@ $side-gnb-width: 250px;
   }
 
   &-header {
-    .logo {
-      @include flexbox;
+    @include flexbox;
+    position: sticky;
+    top: 0;
+    left: 20px;
+    width: 250px;
+    height: 70px;
+    z-index: $side-gnb-header-level;
+    background-color: $white;
 
+    .logo {
       a {
         display: block;
         padding: 20px;
+        margin-right: 20px;
       }
 
       img {

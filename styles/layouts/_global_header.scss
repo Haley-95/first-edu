@@ -1,6 +1,6 @@
 .global-header {
   background-color: $primary;
-  border-bottom: 1px solid $select;
+  border-bottom: 1px solid $border;
   transition: all 150ms ease-in-out;
 
   &-wrapper {
@@ -32,6 +32,16 @@
 
     &.is-active {
       margin-left: 250px;
+
+      .input-group {
+        :not(:disabled):focus {
+          width: 220px;
+        }
+      }
+
+      .search-history {
+        width: 220px;
+      }
     }
   }
 
