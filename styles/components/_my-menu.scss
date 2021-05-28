@@ -62,7 +62,6 @@
     position: absolute;
     top: calc(100% + 8px);
     left: -33px;
-    z-index: $my-menu-level;
     opacity: 0;
     visibility: hidden;
     transform: translate3d(-50%, -10px, 0);

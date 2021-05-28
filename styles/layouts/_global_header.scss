@@ -1,4 +1,7 @@
 .global-header {
+  position: sticky;
+  top: 0;
+  z-index: $global-header-level;
   background-color: $primary;
   border-bottom: 1px solid $border;
   transition: all 150ms ease-in-out;
@@ -67,6 +70,12 @@
 
     &.is-active {
       margin-left: 250px;
+
+      .input-group {
+        :not(:disabled):focus {
+          width: 260px;
+        }
+      }
     }
 
     .global-header-search {
