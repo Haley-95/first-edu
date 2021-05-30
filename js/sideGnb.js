@@ -5,7 +5,7 @@ const close = document.querySelector('.close')
 const sideGnb = document.querySelector('.side-gnb')
 const globalHeader = document.querySelector('.global-header')
 const commonBackground = document.querySelector('.common-background')
-const primaryBackground = document.querySelector('.primary-background ')
+const primaryBackground = document.querySelector('.breadcrumb-point')
 
 if (mediaDesktop.matches) {
   open.classList.add('visually-hidden')

@@ -24,6 +24,7 @@
 @import './components/my-menu';
 @import './components/drawer-menu';
 @import './components/search-history';
+@import './components/tables';
 
 @import './layouts/grids';
 @import './layouts/global_header';
@@ -31,3 +32,5 @@
 @import './layouts/overlay';
 @import './layouts/search-modal';
 @import './layouts/common-background';
+
+@import './pages/attendance';

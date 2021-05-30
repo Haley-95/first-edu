@@ -1,9 +1,10 @@
 .global-header {
+  @include flexbox;
   position: sticky;
   top: 0;
+  left: 0;
   z-index: $global-header-level;
   background-color: $primary;
-  border-bottom: 1px solid $border;
   transition: all 150ms ease-in-out;
 
   &-wrapper {
@@ -27,6 +28,38 @@
   &-search {
     @include flexbox;
   }
+
+  .breadcrumb-point {
+    padding: 16px 0;
+    border-top: 1px solid $active;
+
+    .breadcrumb {
+      @include inline-flexbox(evenly);
+      @include text-style(14, $strong);
+      flex-wrap: wrap;
+      padding: 8px;
+      background-color: $active;
+      border-radius: 4px;
+      box-shadow: $dropdown-shadow;
+
+      i,
+      a {
+        color: $primary;
+
+        &:hover {
+          color: $p-dark;
+        }
+      }
+
+      p {
+        color: $title;
+      }
+
+      .unicode {
+        padding: 0 10px;
+      }
+    }
+  }
 }
 
 @include responsive(T) {
@@ -41,25 +74,30 @@
           width: 220px;
         }
       }
+    }
 
-      .search-history {
-        width: 220px;
+    .breadcrumb-point {
+      padding: 30px 0;
+
+      .breadcrumb {
+        @include text-style(16);
+        padding: 10px;
       }
     }
-  }
 
-  .global-header-left {
-    @include flexbox;
+    .global-header-left {
+      @include flexbox;
 
-    .input-group {
-      margin-left: 24px;
+      .input-group {
+        margin-left: 24px;
+      }
     }
-  }
 
-  .global-header-search {
-    .search-history {
-      width: 260px;
-      margin-left: 23px;
+    .global-header-search {
+      .search-history {
+        width: 260px;
+        margin-left: 23px;
+      }
     }
   }
 }
@@ -75,6 +113,15 @@
         :not(:disabled):focus {
           width: 260px;
         }
+      }
+    }
+
+    .breadcrumb-point {
+      padding: 30px 0;
+
+      .breadcrumb {
+        @include text-style(16);
+        padding: 10px;
       }
     }
 

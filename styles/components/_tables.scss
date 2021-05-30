@@ -1,0 +1,51 @@
+.table-card {
+  position: relative;
+}
+
+.table-box {
+  overflow-y: auto;
+}
+
+.common-table {
+  @include text-style(14, $bold);
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: auto;
+
+  .thead-light {
+    position: absolute;
+    top: 0;
+    z-index: $table-head-level;
+    display: table;
+    width: 100%;
+    color: $text;
+    background-color: $select;
+    border-bottom: 1px solid $select;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  th,
+  td {
+    padding: 2px;
+    word-break: break-all;
+    border-bottom: 1px solid $select;
+  }
+}
+
+@include responsive(T) {
+  .common-table {
+    th,
+    td {
+      padding: 8px;
+    }
+  }
+}
+
+@include responsive(D) {
+  th,
+  td {
+    padding: 8px;
+  }
+}

@@ -10,7 +10,9 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: $font-main;
+  background-color: $active;
 }
 
 h1 {
