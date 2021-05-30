@@ -435,18 +435,293 @@
       </div>
     </div>
   </aside>
-
   
-  <main class="common-background">
+  <main class="common-background attendance">
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <div class="common-card">
+          <section class="common-card attendance-class-card">
+            <h1 class="visually-hidden">날짜 및 강의 선택</h1>
+            <form class="date-align" action="#" method="POST">
+              <label for="check-date"></label>
+              <input class="attendance-date" id="#" type="date" name="attendance-date" value="2021-05-28">
+            </form>
             
-          </div>
+            <article class="class-btn sm-only">
+              <button type="button" class="btn-fill-active btn-basic btn-setting">수학 1</button>
+              <button type="button" class="btn-fill-active btn-basic btn-setting">수학 2</button>
+              <button type="button" class="btn-fill-active btn-basic btn-setting">수학 3</button>
+            </article>
+            <article class="class-btn sm-only">
+              <button type="button" class="btn-fill-active btn-basic btn-setting">영어 1</button>
+              <button type="button" class="btn-fill-active btn-basic btn-setting">영어 2</button>
+              <button type="button" class="btn-fill-active btn-basic btn-setting">영어 3</button>
+            </article>
+            
+            <article class="class-btn sm-hidden">
+              <button type="button" class="btn-fill-active btn-check btn-setting">수학 1</button>
+              <button type="button" class="btn-fill-active btn-check btn-setting">수학 2</button>
+              <button type="button" class="btn-fill-active btn-check btn-setting">수학 3</button>
+              <button type="button" class="btn-fill-active btn-check btn-setting">영어 1</button>
+              <button type="button" class="btn-fill-active btn-check btn-setting">영어 2</button>
+              <button type="button" class="btn-fill-active btn-check btn-setting">영어 3</button>
+            </article>
+          </section>
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-sm-4 col-md-9">
+          <section class="common-card attendance-number-card">
+            <article class="attendance-number-content">
+              <h1 class="visually-hidden">출결 인원</h1>
+              <div class="attendance-number-type">
+                <p>출석</p>
+                <strong>0</strong>
+              </div>
+              <p class="unicode-setting">&vert; </p>
+              <div class="attendance-number-type">
+                <p>조퇴</p>
+                <strong>0</strong>
+              </div>
+              <p class="unicode-setting">&vert; </p>
+              <div class="attendance-number-type">
+                <p>결석</p>
+                <strong>0</strong>
+              </div> 
+              <p class="unicode-setting">&vert; </p>
+              <div class="attendance-number-type">
+                <p>지각</p>
+                <strong>0</strong>
+              </div>
+            </article>
+          </section>
+        </div>
+
+        <div class="col-sm-4 col-md-3">
+          <section class="common-card attendance-check-card sm-hidden">
+            <button type="button" class="btn-fill-blue btn-long btn-margin">전체 출석</button>
+            <button type="button" class="btn-fill-light-blue btn-long btn-margin">저장</button>
+          </section>
+
+          <section class="common-card attendance-check-card sm-only">
+            <button type="button" class="btn-fill-blue btn-basic btn-margin">전체 출석</button>
+            <button type="button" class="btn-fill-light-blue btn-basic btn-margin">저장</button>
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <section class="common-card attendance-table-card table-card">
+            <div class="table-box attendance-table-box">
+              <table class="common-table attendance-table">
+                <thead class="thead-light">
+                  <tr>
+                    <th class="attendance-table-col-1" scope="col">번호</th>
+                    <th class="attendance-table-col-2" scope="col">강의</th>
+                    <th class="attendance-table-col-3" scope="col">학생</th>
+                    <th class="attendance-table-col-4" scope="col">출결사항</th>
+                    <th class="attendance-table-col-5" scope="col">비고</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="attendance-table-col-1">1</td>
+                    <td class="attendance-table-col-2">수학1</td>
+                    <td class="attendance-table-col-3">이지은</td>
+                    <td class="attendance-table-col-4">
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td class="attendance-table-col-5">
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>수학1</td>
+                    <td>이지은</td>
+                    <td>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
+                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
+                    </td>
+                    <td>
+                      <div class="attendance-memo">
+                        <span>가족 모임</span>
+                        <button type="button" class="edit-btn edit-setting">
+                          <i class="fas fa-pen"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -456,5 +731,6 @@
 <script src="./js/myMenu.js"></script>
 <script src="./js/sideGnb.js"></script>
 <script src="./js/searchHistory.js"></script>
+<script src="./js/attendance.js"></script>
 </body>
 </html>

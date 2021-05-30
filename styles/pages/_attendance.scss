@@ -1,0 +1,289 @@
+.attendance {
+  &-class-card {
+    @include column-flexbox(around);
+
+    .date-align {
+      @include flexbox;
+      margin-bottom: 8px;
+
+      .attendance-date {
+        flex-wrap: wrap;
+        height: 35px;
+        padding: 0 10px;
+        margin-bottom: 4px;
+        background-color: $active;
+        border: 1px solid $select;
+        border-radius: 4px;
+      }
+    }
+
+    .class-btn {
+      @include flexbox;
+      flex-wrap: wrap;
+
+      .btn-setting {
+        padding: 5px 15px;
+        margin: 8px;
+
+        &.is-active {
+          color: $white;
+          background-color: $default;
+
+          &:not(:disabled):active {
+            background-color: $default;
+          }
+        }
+      }
+    }
+  }
+
+  .attendance-number-card {
+    @include flexbox(around);
+    width: 100%;
+    height: 100px;
+
+    .attendance-number-content {
+      @include flexbox(evenly);
+      width: 100%;
+
+      .unicode-setting {
+        color: $s-dark;
+      }
+
+      .attendance-number-type {
+        @include column-flexbox;
+        font-weight: 500;
+        text-align: center;
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+
+      .attendance-number-type:last-child {
+        margin-right: 0;
+      }
+
+      .attendance-number-type:nth-child(2) {
+        color: $blue;
+      }
+
+      .attendance-number-type:nth-child(4) {
+        color: $violet;
+      }
+
+      .attendance-number-type:nth-child(6) {
+        color: $red;
+      }
+
+      .attendance-number-type:nth-child(8) {
+        color: $orange;
+      }
+    }
+  }
+
+  .attendance-check-card {
+    @include flexbox;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    .btn-margin {
+      @include text-style(14);
+      width: 100%;
+      height: 40px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .btn-margin:first-child {
+      margin-right: 10px;
+    }
+  }
+
+  .attendance-table-card {
+    padding: 0;
+
+    .attendance-table-col-1 {
+      width: 10%;
+    }
+
+    .attendance-table-col-2 {
+      width: 20%;
+    }
+
+    .attendance-table-col-3 {
+      width: 20%;
+    }
+
+    .attendance-table-col-4 {
+      width: 25%;
+    }
+
+    .attendance-table-col-5 {
+      width: 25%;
+    }
+
+    .btn-size {
+      padding: 10px;
+      margin: 2px;
+    }
+
+    .attendance-memo {
+      @include column-flexbox();
+
+      .edit-setting {
+        flex-shrink: 0;
+        margin: 10px;
+      }
+    }
+
+    .attendance-table-box {
+      max-height: 630px;
+      min-height: 320px;
+      padding-top: 30px;
+    }
+  }
+
+  @include responsive(T) {
+    .attendance-class-card {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .date-align {
+        margin: 0 8px 0 0;
+      }
+
+      .btn-setting {
+        padding: 15px 30px;
+        margin: 8px;
+      }
+    }
+
+    .attendance-number-card {
+      @include text-style(16);
+    }
+
+    .attendance-check-card {
+      @include column-flexbox;
+
+      .btn-margin {
+        width: 100%;
+        height: 40px;
+        padding: 0 10px;
+        margin-bottom: 9px;
+      }
+
+      .btn-margin:first-child {
+        margin: 6px 0 9px 0;
+      }
+
+      .btn-margin:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .attendance-table-card {
+      .attendance-table-col-1 {
+        width: 10%;
+      }
+
+      .attendance-table-col-2 {
+        width: 10%;
+      }
+
+      .attendance-table-col-3 {
+        width: 15%;
+      }
+
+      .attendance-table-col-4 {
+        width: 40%;
+      }
+
+      .attendance-table-col-5 {
+        width: 35%;
+      }
+
+      .btn-size {
+        padding: 15px;
+      }
+    }
+
+    .attendance-table-box {
+      max-height: 690px;
+      padding-top: 40px;
+    }
+  }
+
+  @include responsive(D) {
+    .attendance-class-card {
+      flex-direction: row;
+
+      .date-align {
+        margin: 0 10px 0 0;
+      }
+
+      .btn-setting {
+        padding: 15px 40px;
+        margin: 10px;
+      }
+    }
+
+    .attendance-number-card {
+      @include text-style(16);
+    }
+
+    .attendance-check-card {
+      @include column-flexbox;
+
+      .btn-margin {
+        width: 100%;
+        height: 40px;
+        margin-bottom: 9px;
+      }
+
+      .btn-margin:first-child {
+        margin: 6px 0 9px 0;
+      }
+
+      .btn-margin:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .attendance-table-card {
+      .attendance-table-col-1 {
+        width: 10%;
+      }
+
+      .attendance-table-col-2 {
+        width: 10%;
+      }
+
+      .attendance-table-col-3 {
+        width: 10%;
+      }
+
+      .attendance-table-col-4 {
+        width: 40%;
+      }
+
+      .attendance-table-col-5 {
+        width: 30%;
+      }
+
+      .btn-size {
+        padding: 15px 25px;
+      }
+
+      .attendance-memo {
+        flex-direction: row;
+      }
+
+      .attendance-table-box {
+        max-height: 690px;
+        padding-top: 40px;
+      }
+    }
+  }
+}
