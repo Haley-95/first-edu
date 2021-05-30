@@ -17,19 +17,95 @@
 }
 
 // Note: Buttons Styles
+.btn-outlined-gray {
+  @extend %btn-base;
+  color: $title;
+  background-color: transparent;
+  border: 1px solid $title;
+
+  &:not(:disabled):active {
+    background-color: $select;
+  }
+}
+
+.btn-outlined-primary {
+  @extend %btn-base;
+  color: $primary;
+  background-color: $white;
+  border: 1px solid $p-dark;
+}
+
+.btn-outlined-blue {
+  @extend %btn-base;
+  color: $blue;
+  background-color: $white;
+  border: 1px solid $blue;
+
+  &:not(:disabled):active {
+    color: $white;
+    background-color: $b-dark;
+  }
+}
+
+.btn-outlined-green {
+  @extend %btn-base;
+  color: $green;
+  background-color: $white;
+  border: 1px solid $g-dark;
+}
+
+.btn-outlined-red {
+  @extend %btn-base;
+  color: $red;
+  background-color: $white;
+  border: 1px solid $red;
+
+  &:not(:disabled):active {
+    color: $white;
+    background-color: $r-dark;
+  }
+}
+
+.btn-outlined-orange {
+  @extend %btn-base;
+  color: $orange;
+  background-color: $white;
+  border: 1px solid $orange;
+
+  &:not(:disabled):active {
+    color: $white;
+    background-color: $o-dark;
+  }
+}
+
+.btn-outlined-violet {
+  @extend %btn-base;
+  color: $violet;
+  background-color: $white;
+  border: 1px solid $violet;
+
+  &:not(:disabled):active {
+    color: $white;
+    background-color: $v-dark;
+  }
+}
+
 .btn-fill-primary {
   @extend %btn-base;
   color: $white;
   background-color: $primary;
+  border: 1px solid $primary;
 
   &:not(:disabled):active {
     background-color: $p-dark;
   }
 }
+
 .btn-fill-light-blue {
   @extend %btn-base;
   color: $white;
   background-color: $light-blue;
+  border: 1px solid $light-blue;
 
   &:not(:disabled):active {
     background-color: $lb-dark;
@@ -51,6 +127,7 @@
   @extend %btn-base;
   color: $bold;
   background-color: $select;
+  border: 1px solid $select;
 
   &:not(:disabled):active {
     background-color: $s-dark;
@@ -61,6 +138,7 @@
   @extend %btn-base;
   color: $white;
   background-color: $red;
+  border: 1px solid $red;
 
   &:not(:disabled):active {
     background-color: $r-dark;
@@ -71,6 +149,7 @@
   @extend %btn-base;
   color: $white;
   background-color: $orange;
+  border: 1px solid $orange;
 
   &:not(:disabled):active {
     background-color: $o-dark;
@@ -81,6 +160,7 @@
   @extend %btn-base;
   color: $white;
   background-color: $violet;
+  border: 1px solid $violet;
 
   &:not(:disabled):active {
     background-color: $v-dark;
@@ -91,6 +171,7 @@
   @extend %btn-base;
   color: $white;
   background-color: $green;
+  border: 1px solid $green;
 
   &:not(:disabled):active {
     background-color: $g-dark;
@@ -101,63 +182,11 @@
   @extend %btn-base;
   color: $white;
   background-color: $blue;
+  border: 1px solid $blue;
 
   &:not(:disabled):active {
     background-color: $b-dark;
   }
-}
-
-.btn-outlined-gray {
-  @extend %btn-base;
-  color: $title;
-  background-color: transparent;
-  border: 1px solid $title;
-
-  &:not(:disabled):active {
-    background-color: $select;
-  }
-}
-
-.btn-outlined-primary {
-  @extend %btn-base;
-  color: $primary;
-  background-color: $white;
-  border: 1px solid $primary;
-}
-
-.btn-outlined-blue {
-  @extend %btn-base;
-  color: $blue;
-  background-color: $white;
-  border: 1px solid $blue;
-}
-
-.btn-outlined-green {
-  @extend %btn-base;
-  color: $green;
-  background-color: $white;
-  border: 1px solid $green;
-}
-
-.btn-outlined-red {
-  @extend %btn-base;
-  color: $red;
-  background-color: $white;
-  border: 1px solid $red;
-}
-
-.btn-outlined-orange {
-  @extend %btn-base;
-  color: $orange;
-  background-color: $white;
-  border: 1px solid $orange;
-}
-
-.btn-outlined-violet {
-  @extend %btn-base;
-  color: $violet;
-  background-color: $white;
-  border: 1px solid $violet;
 }
 
 // Note: Buttons Sizes
@@ -190,4 +219,24 @@
   width: 100px;
   height: 100px;
   border-radius: 100%;
+}
+
+// Note: Etc Buttons
+.edit-btn {
+  @include flexbox;
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  color: $bold;
+  background-color: $secondary;
+  border-radius: 50%;
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    background-color: $border;
+  }
+
+  &:active {
+    background-color: $s-dark;
+  }
 }
