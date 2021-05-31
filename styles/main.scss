@@ -27,10 +27,11 @@
 @import './components/tables';
 
 @import './layouts/grids';
-@import './layouts/global_header';
+@import './layouts/global-header';
 @import './layouts/side-gnb';
 @import './layouts/overlay';
 @import './layouts/search-modal';
 @import './layouts/common-background';
 
-@import './pages/attendance';
+@import './pages/attendance-input';
+@import './pages/attendance-list';
