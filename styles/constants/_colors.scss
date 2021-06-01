@@ -26,4 +26,11 @@ $orange: #fb8b40;
 $o-dark: #db6810;
 $violet: #825ee4;
 $v-dark: #4d32b1;
-$gradient-primary: linear-gradient(87deg, #5e72e4 0, #825ee4 100%);
+$gradient-primary: conic-gradient(
+  from -66.7deg at 44.82% 53.06%,
+  #5e72e4 -25deg,
+  #825ee4 153.9deg,
+  #172b4d 154deg,
+  #172b4d 334deg,
+  #5e72e4 334.1deg
+);

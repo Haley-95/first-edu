@@ -37,6 +37,28 @@ textarea {
   }
 }
 
+// sass-lint:disable-all
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox'] + label {
+  display: inline-block;
+  transition: all 250ms ease-in-out;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: $login-shadow;
+
+  &:hover {
+    background-color: $select;
+    cursor: pointer;
+  }
+}
+
+input[type='checkbox']:checked + label {
+  background-color: $primary;
+}
+
 a,
 button {
   cursor: pointer;

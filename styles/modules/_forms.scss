@@ -27,7 +27,8 @@
 
 .form-select,
 .form-input,
-.form-input-search {
+.form-input-search,
+.form-input-login {
   @extend %form-base;
 }
 
@@ -84,5 +85,28 @@
     font-size: 20px;
     color: $title;
     pointer-events: none;
+  }
+}
+
+.login-input-group {
+  position: relative;
+
+  .form-input-login {
+    padding-left: 45px;
+    border: 0;
+    box-shadow: $login-shadow;
+  }
+
+  i {
+    @include pos-center-y;
+    left: 15px;
+    font-size: 15px;
+    color: $title;
+    pointer-events: none;
+    transition: all 200ms ease-in-out;
+
+    &.is-active {
+      color: $text;
+    }
   }
 }
