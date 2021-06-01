@@ -123,6 +123,17 @@
   }
 }
 
+.btn-fill-seconary {
+  @extend %btn-base;
+  color: $bold;
+  background-color: $secondary;
+  border: 1px solid $secondary;
+
+  &:not(:disabled):active {
+    background-color: $select;
+  }
+}
+
 .btn-fill-select {
   @extend %btn-base;
   color: $bold;

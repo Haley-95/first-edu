@@ -14,6 +14,30 @@
   background-color: $default;
 }
 
+.tag-primary {
+  @extend %tag-base;
+  color: $white;
+  background-color: $primary;
+}
+
+.tag-p-dark {
+  @extend %tag-base;
+  color: $white;
+  background-color: $p-dark;
+}
+
+.tag-light-blue {
+  @extend %tag-base;
+  color: $white;
+  background-color: $light-blue;
+}
+
+.tag-lb-dark {
+  @extend %tag-base;
+  color: $white;
+  background-color: $lb-dark;
+}
+
 .tag-red {
   @extend %tag-base;
   color: $white;
@@ -30,6 +54,12 @@
   @extend %tag-base;
   color: $white;
   background-color: $blue;
+}
+
+.tag-b-dark {
+  @extend %tag-base;
+  color: $white;
+  background-color: $b-dark;
 }
 
 .tag-orange {
