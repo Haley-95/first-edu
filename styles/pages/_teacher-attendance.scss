@@ -1,0 +1,125 @@
+.attendance {
+  .teacher-attendance-check-card {
+    @include flexbox(evenly);
+    position: relative;
+    flex-wrap: wrap;
+
+    .teacher-attendance-title {
+      @include text-style(14, $text);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 2px;
+      text-align: center;
+      background-color: $select;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+    }
+
+    .teacher-attendance-check-btn {
+      padding-top: 16px;
+
+      .btn-circle-size {
+        font-weight: 600;
+      }
+
+      .teacher-attendance-time-info {
+        @include column-flexbox;
+        padding-top: 10px;
+        color: $bold;
+      }
+    }
+
+    .borderline {
+      height: 150px;
+      margin: 30px 20px 0 20px;
+    }
+  }
+}
+
+@include responsive(T) {
+  .attendance {
+    .attendance-montly-card {
+      @include column-flexbox(evenly);
+      height: 139px;
+
+      .attendance-monthly-date-time {
+        flex-wrap: wrap;
+
+        .monthly-sum-tag {
+          @include text-style(14);
+          height: 35px;
+          padding: 0 20px;
+        }
+      }
+
+      .teacher-attendance-title {
+        padding: 8px;
+      }
+    }
+
+    .teacher-attendance-number-card {
+      height: 139px;
+    }
+
+    .teacher-attendance-check-btn {
+      .btn-circle-size {
+        @include text-style(14);
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+@include responsive(D) {
+  .attendance {
+    .attendance-montly-card {
+      flex-direction: row;
+      height: 100px;
+
+      .date-align {
+        margin: 0;
+
+        .attendance-date {
+          margin: 0;
+        }
+      }
+
+      .attendance-monthly-date-time {
+        @include flexbox(around);
+        height: 60px;
+
+        .monthly-sum-tag {
+          @include text-style(14);
+          height: 35px;
+          margin-top: 0;
+
+          strong {
+            font-weight: 500;
+          }
+
+          .teacher-attendance-title {
+            padding: 8px;
+          }
+        }
+      }
+    }
+
+    .teacher-attendance-number-card {
+      height: 100px;
+    }
+
+    .teacher-attendance-check-btn {
+      @include flexbox;
+
+      .btn-circle-size {
+        @include text-style(14);
+        width: 130px;
+        height: 130px;
+        margin-right: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+}

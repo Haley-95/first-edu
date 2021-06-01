@@ -1,4 +1,9 @@
 .attendance {
+  .borderline {
+    height: 50px;
+    border: 1px solid $select;
+  }
+
   &-class-card {
     @include column-flexbox(around);
 
@@ -45,10 +50,6 @@
     .attendance-number-content {
       @include flexbox(evenly);
       width: 100%;
-
-      .unicode-setting {
-        color: $s-dark;
-      }
 
       .attendance-number-type {
         @include column-flexbox;
