@@ -16,6 +16,7 @@
     }
 
     .my-menu-content {
+      z-index: $my-meun-level;
       opacity: 1;
       visibility: visible;
       transform: translate3d(-50%, 0, 0);
