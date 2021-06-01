@@ -28,7 +28,7 @@
 .form-select,
 .form-input,
 .form-input-search,
-.form-input-login {
+.form-input-non-member {
   @extend %form-base;
 }
 
@@ -88,10 +88,10 @@
   }
 }
 
-.login-input-group {
+.non-member-input-group {
   position: relative;
 
-  .form-input-login {
+  .form-input-non-member {
     padding-left: 45px;
     border: 0;
     box-shadow: $login-shadow;

@@ -1,0 +1,260 @@
+.non-member-page-background {
+  height: 100%;
+  background: $gradient-primary;
+  background-attachment: fixed;
+}
+
+.non-member-header {
+  position: relative;
+  height: 350px;
+  padding-top: 5px;
+
+  &-wrapper {
+    @include flexbox(between);
+    flex-grow: 1;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .non-member-header-left {
+      .white-logo {
+        a {
+          display: block;
+        }
+
+        img {
+          display: block;
+          width: auto;
+          height: 25px;
+        }
+      }
+    }
+
+    .non-member-header-right {
+      .portpolio-icon-content {
+        @include flexbox;
+        margin: 0 0 15px 15px;
+
+        .portpolio-icon-item {
+          width: auto;
+          height: 15px;
+          padding: 8px;
+          color: $white;
+          transition: all 250ms ease-in-out;
+
+          &:hover {
+            color: $select;
+          }
+
+          &:not(:disabled):active {
+            color: $s-dark;
+          }
+
+          .notion-icon {
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.non-member-box {
+  @include pos-center;
+  width: 100%;
+  margin: 40px 0;
+
+  .non-member-content {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    color: $white;
+    text-align: center;
+
+    .project-text {
+      .welcome {
+        margin-bottom: 15px;
+        @include text-style(20);
+        font-weight: 500;
+      }
+
+      .introduce-project {
+        @include text-style(16);
+      }
+    }
+  }
+
+  .non-member-card {
+    padding: 40px 24px;
+    background-color: $active;
+    border-radius: 4px;
+    box-shadow: $dropdown-shadow;
+
+    .send-number-btn {
+      @include flexbox(start);
+      margin-bottom: 20px;
+
+      .non-member-input-group {
+        width: 100%;
+        margin: 0;
+      }
+
+      button {
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        height: 40px;
+        padding: 0 5px;
+
+        &:hover {
+          background-color: $active;
+        }
+
+        &:not(:disabled):active {
+          background-color: $select;
+        }
+      }
+    }
+
+    .non-member-input-group,
+    .non-member-page-title {
+      margin-bottom: 20px;
+      color: $title;
+      text-align: center;
+    }
+
+    .check-wrap {
+      @include flexbox(start);
+      margin: 20px 0;
+
+      .save-id {
+        @include text-style(13);
+        padding-left: 8px;
+        color: $title;
+      }
+
+      .check-save-id {
+        padding: 8px;
+        color: $title;
+      }
+    }
+
+    .btn-right {
+      @include flexbox(end);
+
+      .resend-number {
+        @include text-style(13);
+        margin-bottom: 20px;
+        color: $title;
+        transition: all 250ms ease-in-out;
+
+        &:hover {
+          color: $primary;
+        }
+
+        &:not(:disabled):active {
+          color: $p-dark;
+        }
+      }
+    }
+
+    .btn-center {
+      @include flexbox;
+
+      button {
+        @include text-style(13);
+        flex-shrink: 0;
+        height: 40px;
+      }
+    }
+  }
+
+  .forgot-page {
+    @include flexbox(between);
+
+    .forgot-id,
+    .go-login,
+    .forgot-pwd {
+      @include text-style(12);
+      padding: 15px;
+      color: $white;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        color: $select;
+      }
+
+      &:not(:disabled):active {
+        color: $s-dark;
+      }
+    }
+  }
+}
+
+@include responsive(T) {
+  .non-member-header {
+    padding-top: 20px;
+
+    &-wrapper {
+      .non-member-header-left {
+        .white-logo {
+          img {
+            height: 35px;
+          }
+        }
+      }
+
+      .non-member-header-right {
+        .portpolio-icon-content {
+          .portpolio-icon-item {
+            padding: 10px;
+
+            i {
+              font-size: 20px;
+            }
+
+            .notion-icon {
+              margin: 0;
+              font-size: 20px;
+            }
+
+            .fa-figma {
+              margin-top: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .non-member-box {
+    width: 500px;
+
+    .non-member-content {
+      .project-text {
+        margin-bottom: 60px;
+
+        .welcome {
+          @include text-style(24);
+        }
+
+        .introduce-project {
+          @include text-style(18);
+        }
+      }
+    }
+
+    .non-member-card {
+      padding: 70px 24px;
+
+      .non-member-page-title {
+        @include text-style(18);
+      }
+    }
+
+    .forgot-page {
+      .forgot-id,
+      .go-login,
+      .forgot-pwd {
+        @include text-style(13);
+      }
+    }
+  }
+}
