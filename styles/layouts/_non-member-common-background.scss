@@ -32,11 +32,11 @@
     .non-member-header-right {
       .portpolio-icon-content {
         @include flexbox;
-        margin: 0 0 15px 15px;
+        width: auto;
+        height: 15px;
+        margin: 15px 0 15px;
 
         .portpolio-icon-item {
-          width: auto;
-          height: 15px;
           padding: 8px;
           color: $white;
           transition: all 250ms ease-in-out;

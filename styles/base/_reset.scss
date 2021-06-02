@@ -47,7 +47,7 @@ input[type='checkbox'] + label {
   transition: all 250ms ease-in-out;
   background-color: $white;
   border-radius: 4px;
-  box-shadow: $login-shadow;
+  box-shadow: $non-member-shadow;
 
   &:hover {
     background-color: $select;
