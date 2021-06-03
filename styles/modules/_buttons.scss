@@ -109,6 +109,7 @@
 
   &:not(:disabled):active {
     background-color: $lb-dark;
+    border: 1px solid $lb-dark;
   }
 }
 
