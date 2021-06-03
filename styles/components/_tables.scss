@@ -1,10 +1,10 @@
-.table-card {
-  position: relative;
-  padding: 0;
-}
-
-.table-box {
-  overflow-y: auto;
+.common-table-card {
+  margin-bottom: 16px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: $dropdown-shadow;
 }
 
 .common-table {
@@ -12,51 +12,23 @@
   width: 100%;
   text-align: center;
   border-collapse: collapse;
-  table-layout: auto;
 
-  .thead-light {
+  th {
     color: $text;
     background-color: $select;
-    border-bottom: 1px solid $select;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-  }
-
-  .thead-light-fixed {
-    position: absolute;
-    top: 0;
-    z-index: $table-head-level;
-    display: table;
-    width: 100%;
-    color: $text;
-    background-color: $select;
-    border-bottom: 1px solid $select;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
   }
 
   th,
   td {
-    padding: 2px;
+    padding: 12px 24px;
     word-break: break-all;
+    white-space: nowrap;
     border-bottom: 1px solid $select;
   }
 }
 
 @include responsive(T) {
-  .common-table {
-    th,
-    td {
-      padding: 8px;
-    }
-  }
-}
-
-@include responsive(D) {
-  .common-table {
-    th,
-    td {
-      padding: 8px;
-    }
+  .common-table-card {
+    margin-bottom: 30px;
   }
 }

@@ -1,9 +1,4 @@
 .attendance {
-  .borderline {
-    height: 50px;
-    border: 1px solid $select;
-  }
-
   &-class-card {
     @include column-flexbox(around);
 
@@ -102,47 +97,16 @@
     }
   }
 
-  .attendance-table-card {
-    padding: 0;
+  .btn-size {
+    padding: 10px;
+    margin: 2px;
+  }
 
-    .attendance-table-col-1 {
-      width: 10%;
-    }
+  .attendance-memo {
+    @include flexbox;
 
-    .attendance-table-col-2 {
-      width: 20%;
-    }
-
-    .attendance-table-col-3 {
-      width: 20%;
-    }
-
-    .attendance-table-col-4 {
-      width: 25%;
-    }
-
-    .attendance-table-col-5 {
-      width: 25%;
-    }
-
-    .btn-size {
-      padding: 10px;
-      margin: 2px;
-    }
-
-    .attendance-memo {
-      @include column-flexbox();
-
-      .edit-setting {
-        flex-shrink: 0;
-        margin: 10px;
-      }
-    }
-
-    .attendance-table-box {
-      max-height: 630px;
-      min-height: 320px;
-      padding-top: 30px;
+    .edit-setting {
+      margin-left: 15px;
     }
   }
 
@@ -184,35 +148,8 @@
       }
     }
 
-    .attendance-table-card {
-      .attendance-table-col-1 {
-        width: 10%;
-      }
-
-      .attendance-table-col-2 {
-        width: 10%;
-      }
-
-      .attendance-table-col-3 {
-        width: 15%;
-      }
-
-      .attendance-table-col-4 {
-        width: 40%;
-      }
-
-      .attendance-table-col-5 {
-        width: 35%;
-      }
-
-      .btn-size {
-        padding: 15px;
-      }
-    }
-
-    .attendance-table-box {
-      max-height: 690px;
-      padding-top: 40px;
+    .btn-size {
+      padding: 15px;
     }
   }
 
@@ -252,39 +189,12 @@
       }
     }
 
-    .attendance-table-card {
-      .attendance-table-col-1 {
-        width: 10%;
-      }
+    .student-attendance-input-table-card {
+      max-height: 700px;
+    }
 
-      .attendance-table-col-2 {
-        width: 10%;
-      }
-
-      .attendance-table-col-3 {
-        width: 10%;
-      }
-
-      .attendance-table-col-4 {
-        width: 40%;
-      }
-
-      .attendance-table-col-5 {
-        width: 30%;
-      }
-
-      .btn-size {
-        padding: 15px 25px;
-      }
-
-      .attendance-memo {
-        flex-direction: row;
-      }
-
-      .attendance-table-box {
-        max-height: 690px;
-        padding-top: 40px;
-      }
+    .btn-size {
+      padding: 15px 25px;
     }
   }
 }

@@ -5,18 +5,24 @@
   background-color: $white;
   border: 1px solid $border;
   border-radius: 50%;
+  transition: all 250ms ease-in-out;
 
   &:hover {
-    background-color: $border;
+    background-color: $active;
+  }
+
+  &:not(:disabled):active {
+    background-color: $select;
   }
 }
 
 .pagenation {
   @include flexbox;
+  padding: 24px;
 
   .page-control {
     @extend %page-item-base;
-    width: 36px;
+    min-width: 36px;
     margin: 0 3px;
 
     .material-icons {

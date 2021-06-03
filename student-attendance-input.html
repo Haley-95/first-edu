@@ -520,41 +520,21 @@
 
       <div class="row">
         <div class="col-sm-4">
-          <section class="common-card attendance-table-card table-card">
-            <div class="table-box attendance-table-box">
-              <table class="common-table attendance-table">
-                <thead class="thead-light-fixed">
+          <section class="common-table-card student-attendance-input-table-card">
+              <table class="common-table">
+                <thead>
                   <tr>
-                    <th class="attendance-table-col-1" scope="col">번호</th>
-                    <th class="attendance-table-col-2" scope="col">강의</th>
-                    <th class="attendance-table-col-3" scope="col">학생</th>
-                    <th class="attendance-table-col-4" scope="col">출결사항</th>
-                    <th class="attendance-table-col-5" scope="col">비고</th>
+                    <th scope="col">번호</th>
+                    <th scope="col">강의명</th>
+                    <th scope="col">학생명</th>
+                    <th scope="col">출결사항</th>
+                    <th scope="col">비고</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="attendance-table-col-1">1</td>
-                    <td class="attendance-table-col-2">수학1</td>
-                    <td class="attendance-table-col-3">이지은</td>
-                    <td class="attendance-table-col-4">
-                      <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
-                      <button type="button" class="btn-outlined-gray btn-check btn-size">조퇴</button>
-                      <button type="button" class="btn-outlined-gray btn-check btn-size">결석</button>
-                      <button type="button" class="btn-outlined-gray btn-check btn-size">지각</button>
-                    </td>
-                    <td class="attendance-table-col-5">
-                      <div class="attendance-memo">
-                        <span>가족 모임</span>
-                        <button type="button" class="edit-btn edit-setting">
-                          <i class="fas fa-pen"></i>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -573,7 +553,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -592,7 +572,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -611,7 +591,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -630,7 +610,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -649,7 +629,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -668,7 +648,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -687,7 +667,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -706,7 +686,7 @@
                   </tr>
                   <tr>
                     <td>1</td>
-                    <td>수학1</td>
+                    <td>1학년 초급 수학</td>
                     <td>이지은</td>
                     <td>
                       <button type="button" class="btn-outlined-gray btn-check btn-size">출석</button>
@@ -725,8 +705,34 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </section>
+
+              <div class="pagenation">
+                <button class="page-control page-prev" type="button">
+                  <span class="material-icons"> chevron_left </span>
+                </button>
+                <ol class="page-list">
+                  <li class="page-item">
+                    <a href="/">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="/">2</a>
+                  </li>
+                  <li class="page-item is-active">
+                    <a href="/">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="/">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="/">5</a>
+                  </li>
+                </ol>
+                <button class="page-control page-next" type="button">
+                  <span class="material-icons"> chevron_right </span>
+                </button>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>
