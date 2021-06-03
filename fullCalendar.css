@@ -1322,6 +1322,10 @@ A VERTICAL event
   color: inherit; /* natural color for navlinks */
 }
 
+.calendar-card {
+  height: 520px;
+}
+
 @media screen and (min-width: 768px) {
   .fc .fc-view-harness-active {
     height: 600px !important;
@@ -1341,6 +1345,10 @@ A VERTICAL event
 
   .fc .fc-today-button {
     margin-left: 5px;
+  }
+
+  .calendar-card {
+    height: 700px;
   }
 }
 
@@ -1363,5 +1371,9 @@ A VERTICAL event
 
   .fc .fc-today-button {
     margin-left: 5px;
+  }
+
+  .calendar-card {
+    height: 700px;
   }
 }
