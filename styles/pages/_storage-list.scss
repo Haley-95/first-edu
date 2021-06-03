@@ -1,0 +1,73 @@
+.storage-list-form-content {
+  @include column-flexbox;
+  white-space: nowrap;
+
+  .sum-storage-price {
+    margin: 0 0 16px 6px;
+  }
+
+  .storage-form-content {
+    margin-bottom: 16px;
+  }
+
+  .storage-search-form {
+    .form-input {
+      width: 200px;
+      padding-left: 45px;
+    }
+  }
+}
+
+.storage-table-card {
+  tr {
+    &:hover {
+      cursor: pointer;
+      background-color: $active;
+    }
+
+    &:not(:disabled):active {
+      background-color: $secondary;
+    }
+  }
+}
+
+.tag-sort {
+  @include text-style(14, $text);
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+
+  .fa-sort {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: $r-light;
+  }
+
+  &:not(:disabled):active {
+    color: $red;
+  }
+}
+
+@include responsive(T) {
+  .storage-list-form-content {
+    @include flexbox(between);
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .sum-storage-price {
+      margin: 0 20px 0 0;
+      white-space: nowrap;
+    }
+
+    .storage-form-content {
+      @include flexbox;
+      margin: 0;
+    }
+
+    .storage-search-form {
+      @include flexbox;
+      flex-wrap: wrap;
+    }
+  }
+}
