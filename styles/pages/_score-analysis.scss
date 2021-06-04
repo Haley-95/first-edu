@@ -1,0 +1,125 @@
+.score-analysis-card {
+  .form-wrap {
+    @include column-flexbox;
+    white-space: nowrap;
+
+    .checkbox-wrap {
+      @include flexbox;
+    }
+
+    span {
+      @include text-style(13);
+      margin: 0 10px;
+      color: $text;
+    }
+
+    label {
+      @include flexbox;
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border: 1px solid $border;
+
+      i {
+        font-size: 1px;
+        color: $white;
+      }
+    }
+
+    hr {
+      width: 100%;
+      margin: 16px 0;
+      border: 1px solid $select;
+    }
+
+    .select-exam-wrap {
+      @include flexbox;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      white-space: nowrap;
+
+      .exam-type {
+        margin: 0 13px 0 0;
+      }
+
+      .select-btn {
+        margin-left: 13px;
+      }
+    }
+
+    .select-class-wrap {
+      @include flexbox(start);
+      margin-bottom: 16px;
+
+      .class-name {
+        margin: 0 13px 0 0;
+      }
+    }
+
+    .search-exam-wrap {
+      @include flexbox;
+
+      .material-icons {
+        margin: 0;
+        font-size: 20px;
+        color: $title;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    .form-wrap {
+      @include flexbox(evenly);
+      flex-direction: row;
+
+      span {
+        margin: 0 10px 0 8px;
+      }
+
+      label {
+        width: 18px;
+        height: 18px;
+        border: 1px solid $border;
+
+        i {
+          font-size: 1px;
+          color: $white;
+        }
+      }
+
+      hr {
+        width: 0;
+        height: 20px;
+      }
+
+      .select-exam-wrap {
+        flex-wrap: nowrap;
+        margin: 0;
+        white-space: nowrap;
+
+        .exam-type {
+          margin: 0 8px 0 10px;
+        }
+
+        .select-btn {
+          margin-left: 8px;
+        }
+      }
+
+      .select-class-wrap {
+        margin: 0;
+
+        .class-name {
+          margin: 0 8px 0 10px;
+        }
+      }
+    }
+
+    .search-exam-wrap {
+      .exam-name {
+        margin: 0 8px 0 10px;
+      }
+    }
+  }
+}
