@@ -1,7 +1,6 @@
 .common-table-card {
   margin-bottom: 16px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
   background-color: $white;
   border-radius: 5px;
   box-shadow: $dropdown-shadow;
@@ -30,5 +29,6 @@
 @include responsive(T) {
   .common-table-card {
     margin-bottom: 30px;
+    overflow-y: hidden;
   }
 }

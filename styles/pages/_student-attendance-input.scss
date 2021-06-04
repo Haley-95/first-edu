@@ -97,6 +97,15 @@
     }
   }
 
+  .student-attendance-input-table-card {
+    height: 350px;
+
+    th {
+      position: sticky;
+      top: 0;
+    }
+  }
+
   .btn-size {
     padding: 10px;
     margin: 2px;
@@ -190,7 +199,7 @@
     }
 
     .student-attendance-input-table-card {
-      max-height: 700px;
+      height: 690px;
     }
 
     .btn-size {

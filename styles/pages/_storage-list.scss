@@ -9,17 +9,25 @@
   .storage-form-content {
     margin-bottom: 16px;
   }
+}
 
-  .storage-search-form {
-    .form-input {
-      width: 200px;
-      padding-left: 45px;
-    }
-  }
+.form-input {
+  width: 200px;
+  padding-left: 45px;
 }
 
 .storage-table-card {
+  height: 350px;
+
+  th {
+    position: sticky;
+    top: 0;
+    cursor: default;
+  }
+
   tr {
+    transition: all 150ms ease-in-out;
+
     &:hover {
       cursor: pointer;
       background-color: $active;
@@ -53,21 +61,29 @@
   .storage-list-form-content {
     @include flexbox(between);
     flex-direction: row;
-    flex-wrap: wrap;
 
     .sum-storage-price {
       margin: 0 20px 0 0;
-      white-space: nowrap;
     }
 
     .storage-form-content {
       @include flexbox;
+      flex-wrap: wrap;
       margin: 0;
     }
 
     .storage-search-form {
       @include flexbox;
-      flex-wrap: wrap;
+      padding-top: 2px;
+    }
+  }
+
+  .storage-table-card {
+    height: 830px;
+    overflow-y: hidden;
+
+    th {
+      position: static;
     }
   }
 }
