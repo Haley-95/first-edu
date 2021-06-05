@@ -29,12 +29,15 @@
     transition: all 150ms ease-in-out;
 
     &:hover {
-      cursor: pointer;
       background-color: $active;
     }
+  }
 
-    &:not(:disabled):active {
-      background-color: $secondary;
+  .edit-remove-btn {
+    @include flexbox;
+
+    button:first-child {
+      margin-right: 15px;
     }
   }
 }
@@ -79,8 +82,7 @@
   }
 
   .storage-table-card {
-    height: 830px;
-    overflow-y: hidden;
+    height: auto;
 
     th {
       position: static;
