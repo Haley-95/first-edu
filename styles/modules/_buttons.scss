@@ -239,16 +239,39 @@
   width: 30px;
   height: 30px;
   font-size: 10px;
-  color: $bold;
-  background-color: $secondary;
+  color: $title;
+  border: 1px solid $title;
   border-radius: 50%;
   transition: 200ms all ease-in-out;
 
   &:hover {
-    background-color: $border;
+    color: $text;
+    border: 1px solid $text;
   }
 
   &:active {
-    background-color: $s-dark;
+    color: $black;
+    border: 1px solid $black;
+  }
+}
+
+.delete-btn {
+  @include flexbox;
+  width: 30px;
+  height: 30px;
+  font-size: 10px;
+  color: $r-light;
+  border: 1px solid $r-light;
+  border-radius: 50%;
+  transition: 200ms all ease-in-out;
+
+  &:hover {
+    color: $red;
+    border: 1px solid $red;
+  }
+
+  &:active {
+    color: $r-dark;
+    border: 1px solid $r-dark;
   }
 }
