@@ -139,6 +139,10 @@
         &:hover {
           color: $text;
         }
+
+        &:not(:disabled):active {
+          color: $strong;
+        }
       }
     }
 
