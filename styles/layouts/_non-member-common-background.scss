@@ -124,15 +124,21 @@
       @include flexbox(start);
       margin: 20px 0;
 
+      label {
+        padding: 8px;
+      }
+
       .save-id {
         @include text-style(13);
         padding-left: 8px;
         color: $title;
-      }
+        cursor: pointer;
+        background-color: transparent;
+        transition: all 250ms ease-in-out;
 
-      .check-save-id {
-        padding: 8px;
-        color: $title;
+        &:hover {
+          color: $text;
+        }
       }
     }
 
