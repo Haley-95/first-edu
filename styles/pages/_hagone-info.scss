@@ -1,0 +1,35 @@
+.hagone-table {
+  th {
+    border: 1px solid $border;
+  }
+
+  .table-company-logo {
+    img {
+      width: auto;
+      height: 30px;
+    }
+  }
+}
+
+.hagone-img-card {
+  @include flexbox;
+
+  img {
+    display: block;
+    width: auto;
+    height: 250px;
+  }
+}
+
+@include responsive(T) {
+  .hagone-img-card {
+    @include flexbox;
+
+    img {
+      display: block;
+      width: auto;
+      height: 450px;
+      overflow: hidden;
+    }
+  }
+}
