@@ -77,6 +77,12 @@
   background-color: $orange;
 }
 
+.tag-yellow {
+  @extend %tag-base;
+  color: $white;
+  background-color: $yellow;
+}
+
 .tag-violet {
   @extend %tag-base;
   color: $white;
