@@ -195,7 +195,7 @@
       </h1>
     </header>
   
-  <nav class="drawer-menu-all">
+    <nav class="drawer-menu-all">
     <h2 class="visually-hidden">메뉴</h2>
     
     <strong class="drawer-menu-category">학생</strong>
@@ -213,7 +213,7 @@
       </a>
     </div>
     
-    <div class="drawer-menu">
+    <div class="drawer-menu is-grade">
       <button class="drawer-menu-button" type="button">
         <i class="fas fa-edit" aria-hidden="true"></i>
         성적 관리
@@ -264,7 +264,7 @@
         </a>
       </div>
       
-      <div class="drawer-menu">
+      <div class="drawer-menu is-class">
         <button class="drawer-menu-button" type="button">
           <i class="fas fa-chalkboard" aria-hidden="true"></i>
           수업 관리
@@ -287,7 +287,7 @@
         </div>
       </div>
       
-      <div class="drawer-menu">
+      <div class="drawer-menu is-sms">
         <button class="drawer-menu-button" type="button">
           <i class="fas fa-sms" aria-hidden="true"></i>
           문자 관리
@@ -311,31 +311,14 @@
       </div>
       
       <div class="drawer-menu">
-        <button class="drawer-menu-button" type="button">
+        <a class="drawer-menu-link" href="/">
           <i class="fas fa-clipboard" aria-hidden="true"></i>
-          게시판
-          <span class="material-icons" aria-hidden="true">chevron_right</span>
-        </button>
-        
-        <div class="drawer-menu-content">
-          <ul class="drawer-menu-list">
-            <li class="drawer-menu-item">
-              <a href="/">
-                공지사항
-              </a>
-            </li>
-            <li class="drawer-menu-item">
-              <a href="/">
-                자료실
-              </a>
-            </li>
-          </ul>
-        </div>
+          자료실
+        </a>
       </div>
       
-      
       <!-- Note: Login boss  -->
-      <div class="drawer-menu boss is-active is-open is-boss">
+      <div class="drawer-menu boss is-boss">
         <button class="drawer-menu-button" type="button">
           <i class="fas fa-sitemap"></i>
           조직 관리
@@ -450,7 +433,7 @@
         <div class="col-sm-4">
           <section class="common-card score-analysis-card">
             <section class="form-wrap">
-              <article class="checkbox-wrap">
+              <form class="checkbox-wrap">
                 <input
                 type="checkbox"
                 id="checkHagwonExam"
@@ -458,7 +441,8 @@
                 <label for="checkHagwonExam" class="check-hagwon-exam">
                   <i class="fas fa-check"></i>
                 </label>
-                <span class="hagwon-exam">학원 시험</span>
+                <label for="checkHagwonExam" class="hagwon-exam">학원 시험</label>
+
                 <input
                   type="checkbox"
                   id="checkSchoolExam"
@@ -466,7 +450,8 @@
                 <label for="checkSchoolExam" class="check-school-exam"> 
                   <i class="fas fa-check"></i>
                 </label>
-                <span class="school-exam">학교 내신</span>
+                <label for="checkSchoolExam" class="school-exam">학교 내신</label>
+                
                 <input
                   type="checkbox"
                   id="checkMockExam"
@@ -474,45 +459,59 @@
                 <label for="checkMockExam" class="check-mock-exam">
                   <i class="fas fa-check"></i>
                 </label>
-                <span class="mock-exam">모의고사</span>
-              </article>
+                <label for="checkMockExam" class="mock-exam">모의고사</label>
+              </form>
 
               <hr>
 
               <article class="select-exam-wrap">
                 <span class="exam-type">시험 종류</span>
-                <div class="select-group">
+                <form class="select-group">
                   <select class="form-select">
                     <option value="1">월말 평가</option>
                     <option value="2">주간 평가</option>
                   </select>
                   <i class="fas fa-caret-down" aria-hidden></i>
-                </div>
+                </form>
                 <button type="button" class="btn-fill-primary btn-basic select-btn">관리</button>
               </article>
 
               <article class="select-class-wrap">
                 <span class="class-name">강의명</span>
-                <div class="select-group">
+                <form class="select-group">
                   <select class="form-select">
                     <option value="1">수학</option>
                     <option value="2">영어</option>
                   </select>
                   <i class="fas fa-caret-down" aria-hidden></i>
-                </div>
+                </form>
               </article>
 
               <article class="search-exam-wrap">
                 <span class="exam-name">시험명</span>
-                <div class="input-group">
+                <form class="input-group">
                   <span class="material-icons"> search </span>
                   <input
                     class="form-input"
                     type="search"
                     placeholder="검색어를 입력하세요."
                   />
-                </div>
+                </form>
               </article>
+
+              <button type="button" class="btn-fill-primary btn-basic exam-registration">
+                시험 등록
+              </button>
+
+              <article class="calendar-list-select-btn">
+                <button type="button" class="btn-fill-seconary btn-basic calendar-btn is-active">
+                  달력
+                </button>
+                <button type="button" class="btn-fill-seconary btn-basic list-btn">
+                  목록
+                </button>
+              </article>
+
             </section>
           </section>
         </div>  
@@ -520,8 +519,220 @@
 
       <div class="row">
         <div class="col-sm-4">
-          <section class="common-card">
+          <!-- calendar -->
+          <section class="common-card calendar-card">
             <div id='calendar' class="calendar-table"></div>
+          </section>
+          <!-- table -->
+          <section class="common-table-card score-table-card">
+            <table class="common-table storage-table ">
+              <thead>
+                <tr>
+                  <th scope="col">번호</th>
+                  <th scope="col">시험 종류</th>
+                  <th scope="col">시험명</th>
+                  <th scope="col">시험 대상</th>
+                  <th scope="col">시작 일시</th>
+                  <th scope="col">종료 일시</th>
+                  <th scope="col">비고</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td class="custom-tag">
+                      <i class="fas fa-circle" aria-hidden></i>
+                      모의고사
+                  </td>
+                  <td>고1 3월 모의고사</td>
+                  <td>고1</td>
+                  <td>2021/05/09</td>
+                  <td>2021/05/10</td>
+                  <td>경기도 교육청</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="pagenation">
+              <button class="page-control page-prev" type="button">
+                <span class="material-icons"> chevron_left </span>
+              </button>
+              <ol class="page-list">
+                <li class="page-item">
+                  <a href="/">1</a>
+                </li>
+                <li class="page-item">
+                  <a href="/">2</a>
+                </li>
+                <li class="page-item is-active">
+                  <a href="/">3</a>
+                </li>
+                <li class="page-item">
+                  <a href="/">4</a>
+                </li>
+                <li class="page-item">
+                  <a href="/">5</a>
+                </li>
+              </ol>
+              <button class="page-control page-next" type="button">
+                <span class="material-icons"> chevron_right </span>
+              </button>
+            </div>
           </section>
         </div>
       </div>
@@ -534,7 +745,9 @@
 <script src="./js/myMenu.js"></script>
 <script src="./js/sideGnb.js"></script>
 <script src="./js/searchHistory.js"></script>
-<script src="./js/fullCalendar-attendanceList.js"></script>
+<script src="./js/fullCalendar-score-analysis.js"></script>
 <script src="./js/fullCalendar.js"></script>
+<script src="./js/scoreAnalysis.js"></script>
+<script src="./js/drawerMenu.js"></script>
 </body>
 </html>
