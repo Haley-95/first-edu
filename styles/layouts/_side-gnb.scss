@@ -4,7 +4,7 @@ $side-gnb-width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: $side-gnb-level;
+  z-index: $side-gnb-m-level;
   width: $side-gnb-width;
   height: 100vh;
   padding: 0 10px;
@@ -28,8 +28,8 @@ $side-gnb-width: 250px;
     left: 20px;
     width: 250px;
     height: 70px;
-    z-index: $side-gnb-level;
     background-color: $white;
+    z-index: $side-gnb-m-level;
 
     .logo {
       a {
@@ -44,6 +44,12 @@ $side-gnb-width: 250px;
         height: 35px;
       }
     }
+  }
+}
+
+@include responsive(T) {
+  .side-gnb {
+    z-index: $side-gnb-t-level;
   }
 }
 
