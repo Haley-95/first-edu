@@ -1,0 +1,110 @@
+.consult-list-form-content {
+  @include column-flexbox;
+  white-space: nowrap;
+
+  .consult-form-content {
+    margin-bottom: 16px;
+  }
+
+  .today-consult-list {
+    margin: 0 0 16px 16px;
+  }
+}
+
+.form-input {
+  width: 200px;
+  padding-left: 45px;
+}
+
+.consult-table-card {
+  height: 350px;
+
+  .consult-table {
+    th {
+      position: sticky;
+      top: 0;
+      cursor: default;
+    }
+
+    tr {
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $active;
+      }
+
+      &:active {
+        background-color: $secondary;
+      }
+
+      .consult-text-overflow {
+        display: block;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.tag-sort {
+  @include text-style(14, $text);
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+
+  .fa-sort {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: $r-light;
+  }
+
+  &:not(:disabled):active {
+    color: $red;
+  }
+}
+
+@include responsive(T) {
+  .consult-list-form-content {
+    @include flexbox(between);
+    flex-direction: row;
+
+    .today-consult-list {
+      margin: 0 20px 0 0;
+    }
+
+    .consult-form-content {
+      @include flexbox;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    .consult-search-form {
+      @include flexbox;
+      padding-top: 2px;
+    }
+  }
+
+  .consult-table-card {
+    height: auto;
+
+    .consult-table {
+      table-layout: fixed;
+
+      th {
+        position: static;
+      }
+
+      tr {
+        .consult-text-overflow {
+          display: table-cell;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
