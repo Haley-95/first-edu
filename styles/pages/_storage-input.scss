@@ -1,0 +1,26 @@
+.storage-search-form {
+  @include column-flexbox;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  .sum-student-number {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
+
+@include responsive(T) {
+  .storage-search-form {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .sum-student-number {
+      margin: 0 20px 0 0;
+    }
+
+    .form-flex-row {
+      @include flexbox;
+    }
+  }
+}
