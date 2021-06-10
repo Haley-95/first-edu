@@ -24,6 +24,15 @@
     white-space: nowrap;
     border-bottom: 1px solid $select;
   }
+
+  .include-input {
+    height: 45px;
+    padding: 5px;
+
+    .form-input {
+      width: 100%;
+    }
+  }
 }
 
 @include responsive(T) {
