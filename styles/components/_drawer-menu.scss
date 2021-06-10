@@ -5,10 +5,8 @@
   .drawer-menu {
     $draw-menu-item-height: 45px;
     $grade-length: 2;
-    $class-length: 2;
-    $sms-length: 2;
-    $board-length: 2;
-    $boss-length: 4;
+    $boss-length: 2;
+    transition: all 300ms ease-in-out;
 
     @function _calculate-max-content-height($length) {
       @return $draw-menu-item-height * $length;
@@ -35,24 +33,6 @@
         }
       }
 
-      &.is-class {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($class-length);
-        }
-      }
-
-      &.is-sms {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($sms-length);
-        }
-      }
-
-      &.is-board {
-        .drawer-menu-content {
-          max-height: _calculate-max-content-height($board-length);
-        }
-      }
-
       &.is-boss {
         .drawer-menu-content {
           max-height: _calculate-max-content-height($boss-length);
@@ -61,6 +41,7 @@
 
       .drawer-menu-button span:last-child {
         transform: translateY(-50%) rotate(90deg);
+        transition: all 300ms ease-in-out;
       }
     }
 
@@ -80,7 +61,7 @@
       width: 100%;
       height: 50px;
       padding: 16px;
-      transition: all 200ms ease-in-out;
+      transition: all 250ms ease-in-out;
 
       &:hover {
         font-weight: 500;
