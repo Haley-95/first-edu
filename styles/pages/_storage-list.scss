@@ -3,7 +3,7 @@
   white-space: nowrap;
 
   .sum-storage-price {
-    margin: 0 0 16px 6px;
+    margin: 0 0 16px 16px;
   }
 
   .storage-form-content {
@@ -36,7 +36,7 @@
   .edit-remove-btn {
     @include flexbox;
 
-    button:first-child {
+    a:first-child {
       margin-right: 15px;
     }
   }
