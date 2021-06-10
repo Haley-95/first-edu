@@ -1,0 +1,104 @@
+.teacher-list-form-content {
+  @include column-flexbox;
+  white-space: nowrap;
+
+  .sum-teacher-number {
+    margin: 0 0 16px 6px;
+  }
+}
+
+.teacher-list-table-card {
+  height: 350px;
+
+  th {
+    position: sticky;
+    top: 0;
+    cursor: default;
+  }
+
+  tr {
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background-color: $active;
+    }
+
+    .edit-remove-btn {
+      @include flexbox;
+
+      button:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.tag-sort {
+  @include text-style(14, $text);
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+
+  .fa-sort {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: $r-light;
+  }
+
+  &:not(:disabled):active {
+    color: $red;
+  }
+}
+
+.teacher-list-img {
+  @include flexbox;
+
+  img {
+    display: block;
+    width: 350px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@include responsive(T) {
+  .teacher-list-form-content {
+    @include flexbox(between);
+    flex-direction: row;
+
+    .sum-teacher-number {
+      margin: 0 20px 0 0;
+    }
+
+    .teacher-form-content {
+      @include flexbox;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    .teacher-search-form {
+      @include flexbox;
+      padding-top: 2px;
+    }
+  }
+
+  .teacher-list-table-card {
+    height: auto;
+
+    th {
+      position: static;
+    }
+  }
+
+  .teacher-list-img {
+    @include flexbox;
+
+    img {
+      display: block;
+      width: auto;
+      height: 390px;
+      overflow: hidden;
+    }
+  }
+}
