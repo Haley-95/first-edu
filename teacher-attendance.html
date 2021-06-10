@@ -492,10 +492,11 @@
       
       <div class="row">
         <div class="col-sm-4">
-          <section class="common-card teacher-attendance-check-card">
+          <form class="common-card teacher-attendance-check-card">
             <h1 class="teacher-attendance-title">근태 입력</h1>
             <article class="teacher-attendance-check-btn">
-              <button type="button" class="btn-circle btn-fill-seconary btn-circle-size">출근</button>
+              <input type="radio" id="workStart" name="attendance"></input>
+              <label for="workStart" class="btn-circle btn-fill-seconary btn-circle-size">출근</label>
               <div class="teacher-attendance-time-info">
                 <p>오늘 출근한 시간</p>
                 <strong>08 &ratio; 00</strong>
@@ -503,13 +504,14 @@
             </article>
             <hr class="borderline">
             <article class="teacher-attendance-check-btn">
-              <button type="button" class="btn-circle btn-fill-seconary btn-circle-size">퇴근</button>
+              <input type="radio" id="workEnd" name="attendance"></input>
+              <label for="workEnd" class="btn-circle btn-fill-seconary btn-circle-size">퇴근</label>
               <div class="teacher-attendance-time-info">
                 <p>오늘 퇴근한 시간</p>
                 <strong>00 &ratio; 00</strong>
               </div>
             </article>
-          </section>
+          </form>
         </div>
       </div>
 
@@ -530,6 +532,6 @@
 <script src="./js/sideGnb.js"></script>
 <script src="./js/searchHistory.js"></script>
 <script src="./js/fullCalendar.js"></script>
-<script src="./js/fullCalendar-attendanceList.js"></script>
+<script src="./js/fullCalendar-attendance-list.js"></script>
 </body>
 </html>

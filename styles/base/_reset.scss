@@ -13,6 +13,10 @@ body {
   height: 100%;
   font-family: $font-main;
   background-color: $active;
+
+  &.modal-open {
+    overflow-y: hidden;
+  }
 }
 
 h1 {
@@ -38,25 +42,41 @@ textarea {
 }
 
 // sass-lint:disable-all
+input[type='text'] {
+  &:focus {
+    box-shadow: $non-member-shadow;
+  }
+}
+
 input[type='checkbox'] {
   display: none;
 }
 
 input[type='checkbox'] + label {
-  display: inline-block;
   transition: all 250ms ease-in-out;
-  background-color: $white;
   border-radius: 4px;
   box-shadow: $non-member-shadow;
-
-  &:hover {
-    background-color: $select;
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 input[type='checkbox']:checked + label {
   background-color: $primary;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio'] + label {
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+
+input[type='button'] {
+  &:not(:disabled):focus {
+    border: 1px solid $border;
+    box-shadow: none;
+  }
 }
 
 a,

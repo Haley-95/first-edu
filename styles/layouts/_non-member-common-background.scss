@@ -124,6 +124,15 @@
       @include flexbox(start);
       margin: 20px 0;
 
+      // sass-lint:disable-all
+      input[type='checkbox'] + label {
+        background-color: $white;
+      }
+
+      input[type='checkbox']:checked + label {
+        background-color: $primary;
+      }
+
       label {
         padding: 8px;
       }
