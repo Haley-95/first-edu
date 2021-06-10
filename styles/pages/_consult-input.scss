@@ -1,0 +1,142 @@
+.consult-input-table {
+  height: 350px;
+
+  tr {
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $active;
+    }
+
+    &:active {
+      background-color: $secondary;
+    }
+
+    &.is-active {
+      cursor: default;
+      background-color: $border;
+    }
+  }
+}
+
+.consult-input-card {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  .consult-input-box {
+    white-space: nowrap;
+
+    .consult-input-form {
+      @include flexbox(start);
+      margin-bottom: 41.3px;
+
+      label:first-child {
+        @include text-style(14, $bold);
+        width: 50px;
+        margin-right: 8px;
+      }
+
+      .form-input {
+        padding: 0 15px;
+      }
+
+      .form-select {
+        text-overflow: clip;
+      }
+
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 15px;
+      }
+    }
+
+    //sass-lint:disable-all
+    input[type='radio'] + label {
+      transition: all 250ms ease-in-out;
+      border-radius: 10px;
+      box-shadow: $non-member-shadow;
+      cursor: pointer;
+    }
+
+    .checked-radio {
+      background-color: $primary;
+    }
+
+    .check-discount {
+      @include flexbox;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+
+      i {
+        font-size: 8px;
+        color: $white;
+      }
+    }
+
+    .discount {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .date-align {
+      @include flexbox;
+
+      .attendance-date {
+        height: 35px;
+        padding: 0 10px;
+        border: 1px solid $select;
+        border-radius: 4px;
+      }
+    }
+
+    .consult-input-btn {
+      @include flexbox(between);
+    }
+  }
+}
+
+.consult-img {
+  @include flexbox;
+
+  img {
+    display: block;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@include responsive(T) {
+  .consult-input-table {
+    height: auto;
+  }
+
+  .consult-input-card {
+    .consult-input-box {
+      margin: 0 auto;
+      overflow: hidden;
+      overflow-x: auto;
+
+      .consult-input-form {
+        label:first-child {
+          margin-right: 20px;
+        }
+
+        textarea {
+          height: 300px;
+        }
+      }
+    }
+  }
+
+  .consult-img {
+    img {
+      width: auto;
+      height: 450px;
+    }
+  }
+}
