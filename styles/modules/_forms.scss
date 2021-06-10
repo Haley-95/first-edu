@@ -28,8 +28,10 @@
 .form-select,
 .form-input,
 .form-input-search,
-.form-input-non-member {
+.form-input-non-member,
+textarea {
   @extend %form-base;
+  resize: none;
 }
 
 // Note: Select
