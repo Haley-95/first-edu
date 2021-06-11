@@ -9,9 +9,8 @@
     @include text-style(14, $title);
   }
 
-  h2 {
+  strong {
     @include text-style(24, $strong);
-    margin-bottom: 16px;
     font-weight: 500;
   }
 
@@ -48,6 +47,7 @@
 
   .dasoboard-s-item {
     @include flexbox(start);
+    margin-top: 16px;
 
     span {
       font-size: 15px;
@@ -79,13 +79,31 @@
 
 .dashboard-m-card {
   height: 340px;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
 
   h3 {
     @include text-style(14, $title);
+    margin-bottom: 30px;
   }
 
-  .rect {
-    width: 100%;
+  strong {
+    @include text-style(13, $strong);
+    font-weight: 500;
+  }
+}
+
+.graph {
+  .graph-chart {
+  }
+}
+
+.donuts {
+  @include flexbox(evenly);
+
+  .donut-charts {
+    width: 250px;
   }
 }
 

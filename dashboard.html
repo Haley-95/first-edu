@@ -58,7 +58,7 @@
                     </form>
                     <section class="search-history">
                       <header class="search-history-header">
-                        <h2 class="title">최근 검색어</h2>
+                        <strong class="title">최근 검색어</strong>
                         <button type="button">전체 삭제</button>
                       </header>
                       
@@ -426,7 +426,7 @@
             <section class="common-card dashboard-s-card">
               <article class="dasoboard-s-content">
                 <h1>총 원생 수</h1>
-                <h2>50</h2>
+                <strong>50</strong>
                 <div class="dasoboard-s-item">
                   <p>이번달 현황</p>
                   <span class="material-icons" aria-hidden="true">north</span>
@@ -447,7 +447,7 @@
             <section class="common-card dashboard-s-card">
               <article class="dasoboard-s-content">
                 <h1>총 직원 수</h1>
-                <h2>7</h2>
+                <strong>7</strong>
                 <div class="dasoboard-s-item">
                   <p>이번달 급여</p>
                   <p></p>
@@ -466,7 +466,7 @@
             <section class="common-card dashboard-s-card">
               <article class="dasoboard-s-content">
                 <h1>총 매출</h1>
-                <h2>2,459,000</h2>
+                <strong>2,459,000</strong>
                 <div class="dasoboard-s-item">
                   <p>이번달 매출</p>
                   <p></p>
@@ -485,7 +485,7 @@
             <section class="common-card dashboard-s-card">
               <article class="dasoboard-s-content">
                 <h1>2022 수능</h1>
-                <h2>D -320</h2>
+                <strong>D -320</strong>
                 <div class="dasoboard-s-item">
                   <p>2022/07/15</p>
                 </div>
@@ -513,33 +513,33 @@
 
       <div class="row">
         <div class="col-sm-4 col-md-4">
-          <section class="common-card dashboard-m-card"">
-            <h3>제목</h3>
+          <section class="common-card dashboard-m-card graph">
+            <h3>강의별 원생 수</h3>
+            <article class="graph-chart">
+              <div id="studentClass"></div>
+            </article>
           </section>
         </div>
-
+        
         <div class="col-sm-4 col-md-8">
-          <section class="common-card dashboard-m-card"">
-            <h3>학년별 분포</h3>
-            <article class="donut-charts">
-              <div id="studentGender"></div>
-              <div id="studentGrade"></div>
-              <div id="studentSchool"></div>
-            </article>
-
-            <h3>성별 분포</h3>
-            <article class="donut-charts">
-              <div id="studentGender"></div>
-              <div id="studentGrade"></div>
-              <div id="studentSchool"></div>
-            </article>
-
-            <h3>학교별 분포</h3>
-            <article class="donut-charts">
-              <div id="studentGender"></div>
-              <div id="studentGrade"></div>
-              <div id="studentSchool"></div>
-            </article>
+          <section class="common-card dashboard-m-card">
+            <h3>원생 통계</h3>
+            <section class="donuts">
+              <article class="donut-charts">
+                <strong>학년별 분포</strong>
+                <div id="studentGrade"></div>
+              </article>
+  
+              <article class="donut-charts">
+                <strong>성별 분포</strong>
+                <div id="studentGender"></div>
+              </article>
+  
+              <article class="donut-charts">
+                <strong>학교별 분포</strong>
+                <div id="studentSchool"></div>
+              </article>
+            </section>
           </section>
         </div>
       </div>
