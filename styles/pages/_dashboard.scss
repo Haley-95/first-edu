@@ -80,6 +80,10 @@
 .dashboard-m-card {
   height: 340px;
 
+  h3 {
+    @include text-style(14, $title);
+  }
+
   .rect {
     width: 100%;
   }
