@@ -1,0 +1,91 @@
+.dashboard-s-card {
+  @include flexbox(between);
+  height: 120px;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  h1 {
+    @include text-style(14, $title);
+  }
+
+  h2 {
+    @include text-style(24, $strong);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+
+  .icon-right {
+    i {
+      @include inline-flexbox;
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+      color: $white;
+      border-radius: 100%;
+    }
+  }
+
+  .fa-user-graduate {
+    background: $gradient-orange;
+  }
+
+  .fa-chalkboard-teacher {
+    background: $gradient-green;
+  }
+
+  .fa-won-sign {
+    background: $gradient-blue;
+  }
+
+  .fa-calendar {
+    background: $gradient-red;
+  }
+
+  p {
+    @include text-style(13, $text);
+  }
+
+  .dasoboard-s-item {
+    @include flexbox(start);
+
+    span {
+      font-size: 15px;
+    }
+
+    p:nth-child(1) {
+      margin-right: 12px;
+    }
+
+    span:nth-child(2) {
+      color: $green;
+    }
+
+    p:nth-child(3) {
+      margin-right: 10px;
+      color: $green;
+    }
+
+    span:nth-child(4) {
+      color: $r-light;
+    }
+
+    p:nth-child(5) {
+      margin-right: 10px;
+      color: $r-light;
+    }
+  }
+}
+
+.dashboard-m-card {
+  height: 340px;
+
+  .rect {
+    width: 100%;
+  }
+}
+
+// @include responsive(T) {
+//   .dashboard-s-card {
+//   }
+// }
