@@ -1,0 +1,39 @@
+.myhome-teacher-table {
+  .profile-th {
+    width: 200px;
+    background-color: $white;
+    border: 0;
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+
+  th {
+    border: 1px solid $border;
+  }
+}
+
+.hagone-img-card {
+  @include flexbox;
+
+  img {
+    display: block;
+    width: auto;
+    height: 250px;
+  }
+}
+
+@include responsive(T) {
+  .hagone-img-card {
+    @include flexbox;
+
+    img {
+      display: block;
+      width: auto;
+      height: 520px;
+      overflow: hidden;
+    }
+  }
+}
