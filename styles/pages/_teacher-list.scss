@@ -16,19 +16,16 @@
     cursor: default;
   }
 
-  tr {
+  tbody tr {
+    cursor: pointer;
     transition: all 150ms ease-in-out;
 
     &:hover {
       background-color: $active;
     }
 
-    .edit-remove-btn {
-      @include flexbox;
-
-      button:first-child {
-        margin-right: 15px;
-      }
+    &:not(:disabled):active {
+      background-color: $secondary;
     }
   }
 }
@@ -44,10 +41,6 @@
 
   &:hover {
     color: $r-light;
-  }
-
-  &:not(:disabled):active {
-    color: $red;
   }
 }
 
