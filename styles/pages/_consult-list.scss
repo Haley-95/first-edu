@@ -26,10 +26,10 @@
       cursor: default;
     }
 
-    tr {
+    tbody tr {
       transition: all 150ms ease-in-out;
 
-      &:hover {
+      &:not(.is-active):hover {
         cursor: pointer;
         background-color: $active;
       }
@@ -39,7 +39,6 @@
       }
 
       .consult-text-overflow {
-        display: block;
         width: 150px;
         overflow: hidden;
         text-overflow: ellipsis;

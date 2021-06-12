@@ -15,7 +15,7 @@
   }
 }
 
-.consult-input-card {
+.consult-edit-card {
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
@@ -50,6 +50,10 @@
 
     .consult-input-btn {
       @include flexbox(between);
+
+      .delete-b-btn {
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -65,7 +69,7 @@
   }
 }
 
-.consult-img {
+.consult-edit-img {
   @include flexbox;
 
   img {
@@ -81,7 +85,7 @@
     height: auto;
   }
 
-  .consult-input-card {
+  .consult-edit-card {
     .consult-input-box {
       margin: 0 auto;
       overflow: hidden;
@@ -96,13 +100,21 @@
           height: 300px;
         }
       }
+
+      .consult-input-btn {
+        .delete-b-btn {
+          margin-right: 10px;
+        }
+      }
     }
   }
 
-  .consult-img {
+  .consult-edit-img {
+    height: 733px;
+
     img {
       width: auto;
-      height: 450px;
+      height: 500px;
     }
   }
 }
