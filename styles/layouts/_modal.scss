@@ -57,6 +57,18 @@
       }
     }
 
+    .popup-3btn {
+      button {
+        &:first-child {
+          margin-right: 40px;
+        }
+
+        &:last-child {
+          margin-left: 5px;
+        }
+      }
+    }
+
     .popup-1btn {
       @include flexbox;
       padding: 0 75px;
@@ -102,6 +114,18 @@
         button {
           &:first-child {
             margin-right: 15px;
+          }
+        }
+      }
+
+      .popup-3btn {
+        button {
+          &:first-child {
+            margin-right: 80px;
+          }
+
+          &:last-child {
+            margin-left: 10px;
           }
         }
       }
