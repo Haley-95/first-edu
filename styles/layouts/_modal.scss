@@ -9,7 +9,7 @@
 
   .modal-content {
     @include column-flexbox;
-    padding: 10px;
+    padding: 20px;
     background-color: $white;
     border-radius: 5px;
     box-shadow: $dropdown-shadow;
@@ -24,15 +24,19 @@
       margin-bottom: 70px;
     }
 
-    label {
+    label:first-child {
       @include text-style(14, $bold);
       width: 50px;
       margin-right: 8px;
     }
 
+    .form-left {
+      width: 250px;
+    }
+
     .form-align {
       @include flexbox;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
 
       textarea {
         width: 200px;
@@ -62,11 +66,6 @@
   &.is-active {
     opacity: 1;
     visibility: visible;
-
-    body {
-      position: fixed;
-      overflow-y: hidden;
-    }
   }
 }
 
@@ -75,7 +74,7 @@
     .modal-content {
       padding: 25px;
 
-      label {
+      label:first-child {
         margin-right: 20px;
       }
 

@@ -10,6 +10,39 @@
   }
 }
 
+.checkbox-wrap {
+  @include flexbox;
+
+  //sass-lint:disable-all
+  input[type='radio'] + label {
+    transition: all 250ms ease-in-out;
+    border-radius: 10px;
+    box-shadow: $non-member-shadow;
+    cursor: pointer;
+  }
+
+  .checked-radio {
+    background-color: $primary;
+  }
+
+  .check-discount {
+    @include flexbox;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+
+    i {
+      font-size: 8px;
+      color: $white;
+    }
+  }
+
+  .discount {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}
+
 @include responsive(T) {
   .storage-search-form {
     flex-direction: row;
