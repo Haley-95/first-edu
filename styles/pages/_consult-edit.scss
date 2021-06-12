@@ -1,35 +1,18 @@
-.consult-input-table {
-  height: 350px;
-
-  tbody tr {
-    transition: all 250ms ease-in-out;
-
-    &:hover {
-      cursor: pointer;
-      background-color: $active;
-    }
-
-    &:active {
-      background-color: $secondary;
-    }
-  }
-}
-
-.consult-edit-card {
+.teacher-input-card {
   overflow: hidden;
   overflow-x: auto;
   white-space: nowrap;
 
-  .consult-input-box {
+  .teacher-input-box {
     white-space: nowrap;
 
-    .consult-input-form {
+    .teacher-input-form {
       @include flexbox(start);
       margin-bottom: 41.3px;
 
       label:first-child {
         @include text-style(14, $bold);
-        width: 50px;
+        width: 80px;
         margin-right: 8px;
       }
 
@@ -48,7 +31,7 @@
       }
     }
 
-    .consult-input-btn {
+    .teacher-input-btn {
       @include flexbox(between);
 
       .delete-b-btn {
@@ -69,7 +52,7 @@
   }
 }
 
-.consult-edit-img {
+.teacher-edit-img {
   @include flexbox;
 
   img {
@@ -81,17 +64,13 @@
 }
 
 @include responsive(T) {
-  .consult-input-table {
-    height: auto;
-  }
-
-  .consult-edit-card {
-    .consult-input-box {
+  .teacher-edit-card {
+    .teacher-input-box {
       margin: 0 auto;
       overflow: hidden;
       overflow-x: auto;
 
-      .consult-input-form {
+      .teacher-input-form {
         label:first-child {
           margin-right: 20px;
         }
@@ -101,7 +80,7 @@
         }
       }
 
-      .consult-input-btn {
+      .teacher-input-btn {
         .delete-b-btn {
           margin-right: 10px;
         }
@@ -109,7 +88,7 @@
     }
   }
 
-  .consult-edit-img {
+  .teacher-edit-img {
     height: 733px;
 
     img {
