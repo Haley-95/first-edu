@@ -25,6 +25,18 @@
     border-bottom: 1px solid $select;
   }
 
+  tr {
+    &.is-active {
+      cursor: default;
+      background-color: $border;
+
+      &:hover {
+        cursor: default;
+        background-color: $border;
+      }
+    }
+  }
+
   .include-input {
     height: 45px;
     padding: 5px;

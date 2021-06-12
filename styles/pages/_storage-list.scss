@@ -51,12 +51,28 @@
     font-size: 13px;
   }
 
-  &:hover {
-    color: $r-light;
+  &.is-red {
+    color: $red;
+
+    &:hover {
+      color: $r-light;
+    }
+
+    &:not(:disabled):active {
+      color: $red;
+    }
   }
 
-  &:not(:disabled):active {
-    color: $red;
+  &.is-blue {
+    color: $lb-dark;
+
+    &:hover {
+      color: $light-blue;
+    }
+
+    &:not(:disabled):active {
+      color: $lb-dark;
+    }
   }
 }
 

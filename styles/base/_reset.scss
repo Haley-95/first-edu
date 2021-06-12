@@ -37,7 +37,7 @@ textarea {
 
   &:focus {
     outline: none;
-    box-shadow: none;
+    // box-shadow: none;
   }
 }
 
@@ -70,13 +70,6 @@ input[type='radio'] {
 input[type='radio'] + label {
   transition: all 250ms ease-in-out;
   cursor: pointer;
-}
-
-input[type='button'] {
-  &:not(:disabled):focus {
-    border: 1px solid $border;
-    box-shadow: none;
-  }
 }
 
 a,

@@ -150,7 +150,11 @@ if (completeBtns) {
 overlay.addEventListener('click', () => {
   overlay.classList.remove('is-active')
   body.classList.remove('modal-open')
-  completeModal.classList.remove('is-active')
+
+  if (completeModal) {
+    completeModal.classList.remove('is-active')
+  }
+
   for (const modal of modals) {
     modal.classList.remove('is-active')
   }
