@@ -1,0 +1,109 @@
+.teacher-detail-card {
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  .teacher-input-box {
+    padding: 10px;
+    white-space: nowrap;
+
+    .teacher-input-form {
+      @include flexbox(start);
+      margin-bottom: 30px;
+
+      label:first-child {
+        @include text-style(14, $bold);
+        width: 70px;
+        margin-right: 35px;
+      }
+
+      label {
+        &.essential {
+          color: $p-dark;
+        }
+      }
+
+      button {
+        flex-shrink: 0;
+        flex-wrap: wrap;
+        height: 40px;
+        padding: 0 15px;
+
+        &:hover {
+          background-color: $active;
+        }
+
+        &:not(:disabled):active {
+          background-color: $select;
+        }
+      }
+
+      .form-input {
+        padding: 0 15px;
+      }
+    }
+
+    .teacher-input-btn {
+      @include flexbox(between);
+      padding-top: 30px;
+
+      .delete-b-btn {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.date-align {
+  @include flexbox;
+
+  .attendance-date {
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid $select;
+    border-radius: 4px;
+  }
+}
+
+.teacher-edit-img {
+  @include flexbox;
+
+  img {
+    display: block;
+    width: 500px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@include responsive(T) {
+  .teacher-detail-card {
+    .teacher-input-box {
+      padding: 44px;
+      margin: 0 auto;
+      overflow: hidden;
+      overflow-x: auto;
+
+      .teacher-input-form {
+        label:first-child {
+          margin-right: 50px;
+        }
+      }
+
+      .teacher-input-btn {
+        .delete-b-btn {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .teacher-edit-img {
+    height: 821px;
+
+    img {
+      width: auto;
+      height: 500px;
+    }
+  }
+}
