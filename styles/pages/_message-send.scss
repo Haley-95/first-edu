@@ -1,0 +1,120 @@
+.storage-search-form {
+  @include column-flexbox;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  .sum-student-number {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+}
+
+.message-card {
+  height: 350px;
+  overflow: hidden;
+
+  .message-img {
+    @include flexbox;
+    height: 300px;
+
+    .sm-phone {
+      position: relative;
+      top: -5px;
+      width: 280px;
+      height: auto;
+    }
+
+    .recipient {
+      .form-input {
+        position: absolute;
+        top: -5px;
+        left: 70px;
+        background-color: transparent;
+        border: 0;
+      }
+    }
+
+    textarea {
+      width: 280px;
+      height: 240px;
+      padding: 10px;
+      margin-bottom: 15px;
+      color: $secondary;
+      background-color: $primary;
+      border: 0;
+      border-radius: 4px;
+
+      &:not(:disabled):hover,
+      :focus {
+        box-shadow: none;
+      }
+    }
+
+    .btn-center {
+      @include flexbox(between);
+    }
+  }
+}
+
+@include responsive(T) {
+  .storage-search-form {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .sum-student-number {
+      margin: 0 20px 0 0;
+    }
+
+    .form-flex-row {
+      @include flexbox;
+    }
+  }
+
+  .message-card {
+    height: 782px;
+
+    .message-img {
+      height: 740px;
+      overflow: hidden;
+      overflow-x: auto;
+
+      .md-iphone {
+        width: 500px;
+        height: auto;
+      }
+
+      .recipient {
+        top: -266px;
+        right: 385px;
+      }
+
+      textarea {
+        position: absolute;
+        top: 56px;
+        left: 35px;
+        width: 200px;
+        height: 390px;
+        margin-bottom: 0;
+        box-shadow: none;
+      }
+
+      .btn-center {
+        position: relative;
+        white-space: nowrap;
+
+        .confirm-btn {
+          position: absolute;
+          top: 479px;
+          left: 170px;
+        }
+
+        .cancel-board-btn {
+          position: absolute;
+          top: 479px;
+          left: 40px;
+        }
+      }
+    }
+  }
+}

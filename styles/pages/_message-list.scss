@@ -1,0 +1,109 @@
+.message-list-form-content {
+  @include column-flexbox;
+  white-space: nowrap;
+
+  .message-form-content {
+    margin-bottom: 16px;
+  }
+
+  .today-consult-list {
+    margin: 0 0 16px 16px;
+  }
+}
+
+.form-input {
+  width: 200px;
+  padding-left: 45px;
+}
+
+.message-table-card {
+  height: 350px;
+
+  .message-table {
+    th {
+      position: sticky;
+      top: 0;
+      cursor: default;
+    }
+
+    tbody tr {
+      transition: all 150ms ease-in-out;
+
+      &:not(.is-active):hover {
+        cursor: pointer;
+        background-color: $active;
+      }
+
+      &:not(:disabled):active {
+        background-color: $secondary;
+      }
+
+      .message-text-overflow {
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.tag-sort {
+  @include text-style(14, $text);
+  font-weight: 600;
+  transition: all 250ms ease-in-out;
+
+  .fa-sort {
+    font-size: 13px;
+  }
+
+  &:hover {
+    color: $r-light;
+  }
+
+  &:not(:disabled):active {
+    color: $red;
+  }
+}
+
+@include responsive(T) {
+  .message-list-form-content {
+    @include flexbox(between);
+    flex-direction: row;
+
+    .today-consult-list {
+      margin: 0 20px 0 0;
+    }
+
+    .message-form-content {
+      @include flexbox;
+      flex-wrap: wrap;
+      margin: 0;
+    }
+
+    .message-search-form {
+      @include flexbox;
+      padding-top: 2px;
+    }
+  }
+
+  .message-table-card {
+    height: auto;
+
+    .message-table {
+      table-layout: fixed;
+
+      th {
+        position: static;
+      }
+
+      tr {
+        .message-text-overflow {
+          display: table-cell;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
