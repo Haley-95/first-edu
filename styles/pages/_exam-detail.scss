@@ -1,0 +1,105 @@
+.exam-detail-table {
+  th {
+    border-bottom: 1px solid $border;
+  }
+
+  td {
+    @include text-style(13, $text);
+  }
+
+  .date-align {
+    input {
+      @include text-style(13, $text);
+      transition: all 250ms ease-in-out;
+    }
+
+    input:read-only {
+      border: 0;
+    }
+
+    input:not(:read-only):hover,
+    :not(:read-only):focus {
+      border: 1px solid $primary;
+      box-shadow: $dropdown-shadow;
+    }
+  }
+
+  textarea {
+    height: 100px;
+    padding: 10px;
+  }
+
+  textarea:read-only {
+    border: 0;
+  }
+}
+
+.btn-icon-align {
+  @include flexbox;
+
+  button:nth-child(1) {
+    margin-right: 10px;
+  }
+}
+
+.fa-times-circle {
+  @include flexbox;
+  font-size: 35px;
+  color: $r-light;
+  background-color: $white;
+  border-radius: 50%;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    color: $red;
+  }
+
+  &:active {
+    color: $r-dark;
+  }
+}
+
+.exam-lock {
+  button {
+    i {
+      @include flexbox;
+      width: 35px;
+      height: 35px;
+      font-size: 15px;
+      color: $white;
+      background-color: $primary;
+      border-radius: 50%;
+      transition: background-color 250ms ease-in-out;
+
+      &:hover {
+        background-color: $p-dark;
+      }
+
+      &:active {
+        background-color: $default;
+      }
+    }
+  }
+}
+
+.exam-edit-table,
+.exam-detail-table {
+  .input-group {
+    @include flexbox;
+
+    .form-input {
+      width: 150px;
+      padding: 0 10px;
+      text-align: center;
+      border: 0;
+
+      &.is-active {
+        border: 1px solid $border;
+
+        &:focus {
+          border: 1px solid $primary;
+        }
+      }
+    }
+  }
+}
