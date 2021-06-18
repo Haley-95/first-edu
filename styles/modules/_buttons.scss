@@ -109,6 +109,17 @@
   }
 }
 
+.btn-fill-strong {
+  @extend %btn-base;
+  color: $white;
+  background-color: $strong;
+  border: 1px solid $strong;
+
+  &:not(:disabled):active {
+    background-color: $default;
+  }
+}
+
 .btn-fill-light-blue {
   @extend %btn-base;
   color: $white;

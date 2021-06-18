@@ -48,13 +48,16 @@ textarea {
 .select-group {
   position: relative;
 
-  &.is-active {
+  &:hover,
+  :focus {
     .form-select {
       border-color: $primary;
+      transition: all 250ms ease-in-out;
     }
 
     .fa-caret-down {
       color: $primary;
+      transition: all 250ms ease-in-out;
     }
   }
 
