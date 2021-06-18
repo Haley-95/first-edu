@@ -15,25 +15,42 @@
   }
 }
 
-.hagone-img-card {
+.hagone-img-card,
+.myhome-img-card {
   @include flexbox;
 
   img {
     display: block;
     width: auto;
     height: 250px;
+    overflow: hidden;
+  }
+}
+
+.fa-plus-circle {
+  @include flexbox;
+  font-size: 25px;
+  color: $s-dark;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    color: $title;
+  }
+
+  &:active {
+    color: $text;
   }
 }
 
 @include responsive(T) {
-  .hagone-img-card {
+  .hagone-img-card,
+  .myhome-img-card {
     @include flexbox;
 
     img {
       display: block;
       width: auto;
       height: 520px;
-      overflow: hidden;
     }
   }
 }
