@@ -1,0 +1,19 @@
+.student-detail-table {
+  th {
+    border-bottom: 1px solid $border;
+  }
+}
+
+.student-btn-align {
+  @include flexbox(between);
+
+  .edit-delete-align {
+    button:first-child {
+      margin-right: 5px;
+    }
+  }
+}
+
+.student-img {
+  @include flexbox;
+}
