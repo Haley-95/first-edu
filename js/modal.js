@@ -85,7 +85,9 @@ if (confirmBtn) {
   confirmBtn.addEventListener('click', () => {
     overlay.classList.add('is-active')
     body.classList.add('modal-open')
-    completeInputBoardModal.classList.add('is-active')
+    if (completeInputBoardModal) {
+      completeInputBoardModal.classList.add('is-active')
+    }
   })
 }
 
@@ -119,6 +121,9 @@ for (const backBtn of backBtns) {
       for (const modal of modals) {
         modal.classList.remove('is-active')
       }
+      for (const basicBtn of basicBtns) {
+        basicBtn.disabled = false
+      }
     }
   })
 }
@@ -127,8 +132,13 @@ if (deleteBoardBtn) {
   deleteBoardBtn.addEventListener('click', () => {
     body.classList.add('modal-open')
     deleteBoardModal.classList.remove('is-active')
-    completeDeleteBoardModal.classList.add('is-active')
-    completeInputBoardModal.classList.remove('is-active')
+    if (completeDeleteBoardModal) {
+      completeDeleteBoardModal.classList.add('is-active')
+    }
+
+    if (completeInputBoardModal) {
+      completeInputBoardModal.classList.remove('is-active')
+    }
 
     // completeModal.classList.add('is-active')
   })

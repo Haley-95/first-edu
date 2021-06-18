@@ -6,8 +6,6 @@ let checkFriendLabel = document.querySelector('.check-friend')
 let checkMonthLabel = document.querySelector('.check-month')
 let checkNullLabel = document.querySelector('.check-null')
 let tagSort = document.querySelector('.tag-sort')
-// let isRed = document.querySelector('.is-red')
-// let isBlue = document.querySelector('.is-blue')
 
 for (const btn of radioBtns) {
   btn.addEventListener('change', function () {
